@@ -37,7 +37,7 @@ Intel(r) TXT Configuration Registers:
 TBOOT log:
          max_size=32706
          zip_count=0
-         curr_pos=2417
+         curr_pos=2481
          buf:
 TBOOT: Framebuffer info:
 TBOOT:     address: 0xa4000000
@@ -50,12 +50,16 @@ TBOOT: *********************** TBOOT ***********************
 TBOOT:    2022-03-04 12:00 +0100 1.10.5
 TBOOT: *****************************************************
 TBOOT: command line: logging=serial,memory,vga
-TBOOT: IA32_FEATURE_CONTROL_MSR: 00300005
+TBOOT: IA32_FEATURE_CONTROL_MSR: 0030ff07
 TBOOT: CPU is SMX-capable
-TBOOT: ERR: SENTER disabled by feature control MSR (300005)
-TBOOT: IA32_FEATURE_CONTROL_MSR: 00300005
+TBOOT: CPU is VMX-capable
+TBOOT: SMX is enabled
+TBOOT: ERR: TXT-capable chipset not present
+TBOOT: IA32_FEATURE_CONTROL_MSR: 0030ff07
 TBOOT: CPU is SMX-capable
-TBOOT: ERR: SENTER disabled by feature control MSR (300005)
+TBOOT: CPU is VMX-capable
+TBOOT: SMX is enabled
+TBOOT: ERR: TXT-capable chipset not present
 TBOOT: BSP is cpu 0
 TBOOT: original e820 map:
 TBOOT:  0000000000000000 - 000000000009f000  (1)
@@ -80,7 +84,7 @@ TBOOT: reserving tboot memory log (60000 - 67fff) in e820 table
 TBOOT: no LCP module found
 TBOOT: ELF magic number is not matched, image is not ELF format.
 TBOOT: assuming kernel is Linux format
-TBOOT: get_highest_sized_ram: size 63b4200 -> base 460a6000, size 18c5f000
+TBOOT: get_highest_sized_ram: size 63b4200 -> base 4603c000, size 18cc9000
 TBOOT: Initrd from 0x58950000 to 0x5ed04200
 TBOOT: Kernel (protected mode) from 0x2c00000 to 0x36b1e18
 TBOOT: Kernel (real mode) from 0x90000 to 0x93e00
@@ -89,7 +93,7 @@ TBOOT:  root=/dev/mapper/rhel_icx04-root ro crashkernel=1G-4G:192M,4G-64G:256M
 TBOOT:  ,64G-:512M resume=/dev/mapper/rhel_icx04-swap rd.lvm.lv=rhel_icx04/roo
 TBOOT:  t rd.lvm.lv=rhel_icx04/swap rhgb quiet intel_iommu=off intremap=off in
 TBOOT:  tel_iommu=on noefi
-TBOOT: EFI memmap: memmap base: 0x69808, memmap size: 0x39f0
+TBOOT: EFI memmap: memmap base: 0x69808, memmap size: 0x3b70
 TBOOT: EFI memmap: descr size: 0x30, descr version: 0x1
 TBOOT: transfering control to kernel @0x2c00000...
 
