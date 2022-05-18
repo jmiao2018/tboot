@@ -1,0 +1,241 @@
+FS0:\> TxtBtgInfo_v1.0.24.efi -c R
+*********************************************
+TXTBTGINFO v1.0.24
+Built: Jan 13 2022 16:49:08
+Intel Corporation
+Copyright (c) 2010-2021
+*********************************************
+
+********************************************
+*              CPU Information             *
+********************************************
+
+********************************************
+*  TXT Configuration Registers Information *
+********************************************
+TXT Registers (Offsets from public space at 0xFED30000)
+0h TXT Status                               = 0x3
+ [16] Locality 2 Open                       = 0x0
+ [15] Locality 1 Open                       = 0x0
+ [14] Locality 3 Open                       = 0x0
+ [13] SMM Open                              = 0x0
+ [12] PMRC Lock                             = 0x0
+ [11] Mem CFG OK                            = 0x0
+ [10] NTP Enable                            = 0x0
+ [9:8] Reserved                             = 0x0
+ [7] Private Open                           = 0x0
+ [6] Mem CFG Lock                           = 0x0
+ [4] Mem Unlock                             = 0x0
+ [1] SExit Done                             = 0x1
+ [0] SEnter Done                            = 0x1
+08h TXT Error Status                        = 0x0
+ [6] Wake Error                             = 0x0
+ [1] Rogue Status                           = 0x0
+ [0] TXT Reset                              = 0x0
+30h TXT Errorcode                           = 0x0
+ [27:16] Minor Error Code                   = 0x0
+ [15] Software Source                       = 0x0
+ [14:10] Major Error Code                   = 0x0
+ [9:4] Class Code                           = 0x0
+ [3:0] Module Type                          = 0x0
+110h TXT Device ID                          = 0x1B0118086
+ [47:32] RID                                = 0x1
+ [31:16] DID                                = 0xB011
+ [15:0] VID                                 = 0x8086
+200h TXT.VER.QPIIF                          = 0x1D003000
+ [31] Debug Fuse                            = 0x0
+ [26] DPR Capable                           = 0x1
+ [19] PMRC Capable                          = 0x0
+270h TXT SINIT Base Address                 = 0x0
+278h TXT SINIT Size                         = 0x0
+300h TXT HEAP Base Address                  = 0x0
+308h TXT HEAP Size                          = 0x0
+310h TXT MSEG Base Address                  = 0x0
+318h TXT MSEG Size                          = 0x0
+328h TXT ACM Errorcode                      = 0x0
+ [24:16] Minor Code                         = 0x0
+ [14:10] Major Code                         = 0x0
+ [9:4] Class Code                           = 0x0
+ [3:0] Module Type                          = 0x0
+330h TXT DMA Protected Range                = 0x78000081
+ [31:20] Top                                = 0x780
+ [11:4] Size                                = 0x8
+ [0] Lock                                   = 0x1
+
+
+BootGuard Registers (Offsets from public space at 0xFED30000)
+A0h BOOTSTATUS                              = 0x0000000000000000
+ [63] S-ACM success                         = 0x0
+ [62] CPU error                             = 0x0
+ [61] CPU hot plug                          = 0x0
+ [60] TXT policy disable                    = 0x0
+ [59] BIOS trusted                          = 0x0
+ [47] Memory power down executed            = 0x0
+ [46:32] ACM interal use                    = 0x0
+ [31] BtG startup success                   = 0x0
+ [30] TXT startup success                   = 0x0
+ [29:0] ACM interal use                     = 0x0
+
+328h ACM_STATUS                             = 0x0
+ [31] Valid                                 = 0x0
+ [30:28] Reserved                           = 0x0
+ [27:16] Minor Error Code                   = 0x0
+ [15] ACM Started                           = 0x0
+ [14:10] Type2/Major Error Code             = 0x0
+ [9:4] Type2/Class Code                     = 0x0
+ [3:0] Type2/Module Type                    = 0x0
+
+378h ACM_POLICY_STATUS                      = 0x0000000000000000
+ [63:37] Reserved                           = 0x0
+ [36] TPM Startup locality                  = 0x0
+ [35] CPU co-signing enabled                = 0x0
+ [34:32] S-CRTM Status                      = 0x0
+ [31:30] Reserved                           = 0x0
+ [29] IBB DMA Protection                    = 0x0
+ [28:27] Reserved                           = 0x0
+ [26:25] Memory Scrub Policy                = 0x0
+ [24:20] TXT profile                        = 0x0
+ [19:18] Backup action                      = 0x0
+ [17] BootPolicies2                         = 0x0
+ [16] Reserved                              = 0x0
+ [15] TPM Success                           = 0x0
+ [14:13] TPM Type                           = 0x0
+ BootPolicies
+  [12] FWSTS4[11]                           = 0x0
+  [11] BP.RSTR.PBE                          = 0x0
+  [10] BP.RSTR.DBI                          = 0x0
+  [9] BP.RSTR.DCD                           = 0x0
+  [8] BP.TYPE.BM                            = 0x0
+  [7] BP.TYPE.T                             = 0x0
+  [6] BP.TYPE.HAP                           = 0x0
+  [5] BP.TYPE.V                             = 0x0
+  [4] BP.TYPE.M                             = 0x0
+ [3:0] KMID                                 = 0x0
+
+MSR 13Ah ANC_SACM_INFO                      = 0xC00000000
+ [35] No Reset Secrets Protect              = 0x1
+ [34] ServerTXTCapability                   = 0x1
+ [32] BootGuardCapability                   = 0x0
+ [7] ModuleRevoked                          = 0x0
+ [6] Verified Boot                          = 0x0
+ [5] Measured Boot                          = 0x0
+ [4] FACB                                   = 0x0
+ [3] TPMSuccess                             = 0x0
+ [2:1] TPMType                              = 0x0
+ [0] NEMEnabled                             = 0x0
+SMBios Type 131 not found
+
+MEI-Host Firmware Status Register
+40h Host Firmware Status Register #1        = 0x352
+ [31] D0i3 Support Valid                    = 0x0
+ [30] D3 Support Valid                      = 0x0
+ [29:28] CURRENT POWER SOURCE               = 0x0
+ [27] BIST RESET REQUEST                    = 0x0
+ [26] BIST Test State                       = 0x0
+ [25] Reserved                              = 0x0
+ [24] Intel ME Boot Options Present         = 0x0
+ [23:20] RESET Count                        = 0x0
+ [19:16] Intel ME Current Operation Mode    = 0x0
+ [15:12] Error Code                         = 0x0
+ [11] FW UPD In Progress                    = 0x0
+ [10] FT BUP LD FLR                         = 0x0
+ [9] FWInitComplete                         = 0x1
+ [8:6] Intel ME Current Operation State     = 0x5
+ [5] FPT Bad                                = 0x0
+ [4] Manufacturing Mode                     = 0x1
+ [3:0] Intel ME Current Working State       = 0x2
+
+48h Host Firmware Status Register #2        = 0x398A0806
+ [31:28] Phase                              = 0x3
+ [27:24] Current PmEvent                    = 0x9
+ [23:16] Status Data                        = 0x8A
+ [15] Listener change for host notify       = 0x0
+ [14] IFU Fault Tolerance test state        = 0x0
+ [13] Reserved                              = 0x0
+ [12] Firmware Update Forced Safe Boot      = 0x0
+ [11] IPU needed state                      = 0x1
+ [10] ME Power Gating Indicator             = 0x0
+ [9] Low Power State                        = 0x0
+ [8] CPU Replaced Valid                     = 0x0
+ [7] Warm Reset Request                     = 0x0
+ [6] MFS Failure                            = 0x0
+ [5] Reserved                               = 0x0
+ [4] CPU Replaced STS                       = 0x0
+ [3] Invoke MEBX                            = 0x0
+ [2:1] ICC Programming status               = 0x3
+ [0] NFTP Load Failure detection field      = 0x0
+
+60h Host Firmware Status Register #3        = 0x30
+ [31:0] Reserved                            = 0x30
+
+64h Host Firmware Status Register #4        = 0x4000
+ [31:16] Reserved                           = 0x0
+ [15] Boot Guard Self-Test                  = 0x0
+ [14] Boot Guard FWSTS Valid                = 0x1
+ [13] Reserved                              = 0x0
+ [12] All TPMs Disconnected                 = 0x0
+ [11] Reserved                              = 0x0
+ [10] Sx Resume Type                        = 0x0
+ [9] Enforcement Flow                       = 0x0
+ [8:0] Reserved                             = 0x0
+
+68h Host Firmware Status Register #5        = 0x0
+ [31] Start Enforcement                     = 0x0
+ [30:29] Reserved                           = 0x0
+ [28:25] INC_BPM_SVN                        = 0x0
+ [24:21] INC_KM_SVN                         = 0x0
+ [20:17] INC_ACM_SVN                        = 0x0
+ [16] S-CRTM Indicator                      = 0x0
+ [15:9] Startup Module Timeout Count        = 0x0
+ [8] Boot Guard ACM DONE STS                = 0x0
+ [7:3] Error Status Code                    = 0x0
+ [2] Result Code Source                     = 0x0
+ [1] Valid Bit                              = 0x0
+ [0] Boot Guard ACM Active STS              = 0x0
+
+6Ch Host Firmware Status Register #6        = 0x80400000
+ [31] TXT Support                           = 0x1
+ [30] FPF Soc Config Lock                   = 0x0
+ [29] Field Programmable Fuses Disable      = 0x0
+ [28] Boot Guard Disable                    = 0x0
+ [27] Error                                 = 0x0
+ [26] BSP BPM Execution Status              = 0x0
+ [25:22] Key Manifest ID                    = 0x1
+ [21:18] BPMSVN                             = 0x0
+ [17:14] KMSVN                              = 0x0
+ [13:10] ACMSVN                             = 0x0
+ [9] Verified Boot Policy                   = 0x0
+ [8] Measured Boot Policy                   = 0x0
+ [7:6] Error Enforcement Policy             = 0x0
+ [5:4] Reserved                             = 0x0
+ [3] Protect BIOS Environment Policy        = 0x0
+ [2] BSP Initialization Disabled            = 0x0
+ [1] CPU Debug Disabled                     = 0x0
+ [0] Force Boot Guard ACM Boot Policy       = 0x0
+
+Boot Profile
+ F  |  M  |  V  |  ENF
+ 0  |  0  |  0  |  00
+
+
+********************************************
+*                 WARNINGS                 *
+********************************************
+Warning: MCH is disabled. Txtinfo cannot evaluate checks based off of MCHBAR.
+
+********************************************
+*                  ERRORS                  *
+********************************************
+TXT Registers Error: SINIT region is either not allocated or size invalid.
+TXT Registers Error: Heap region is either not allocated or too small.
+TXT Registers Error: TXT.DPR != MC_DPR
+MEM Config Error: MC_DPR BITS 1:0 != 0x03
+MEM Config Error: DPR.Top != TSEG.base
+TXT Ranges Error: HEAP region must be located right below TSEG.
+TXT Ranges Error: There is not enough memory for allocation of MVMM structures between DPR base and HEAP (must be >= 40K).
+--------------------------------------------
+
+FAILURE: TXT is enabled in the BIOS but platform is not ready for TXT. Check errors.
+
+--------------------------------------------
+FS0:\> 
