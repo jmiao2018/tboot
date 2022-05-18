@@ -1,6 +1,6 @@
-[root@ADLP02 boot]# txt-stat
+[root@localhost test]# txt-stat
 Intel(r) TXT Configuration Registers:
-        STS: 0x00000002
+        STS: 0x00000012
             senter_done: FALSE
             sexit_done: TRUE
             mem_config_lock: FALSE
@@ -9,7 +9,7 @@ Intel(r) TXT Configuration Registers:
             locality_2_open: FALSE
         ESTS: 0x00
             txt_reset: FALSE
-        E2STS: 0x0000000000000004
+        E2STS: 0x0000000000000000
             secrets: FALSE
         ERRORCODE: 0x00000000
         DIDVID: 0x00000001b00c8086
@@ -37,13 +37,13 @@ Intel(r) TXT Configuration Registers:
 TBOOT log:
          max_size=32706
          zip_count=0
-         curr_pos=3260
+         curr_pos=3356
          buf:
 TBOOT: Framebuffer info:
 TBOOT:     address: 0x4000000000
 TBOOT:     pitch: 7680
 TBOOT:     width: 1920
-TBOOT:     height: 1200
+TBOOT:     height: 1080
 TBOOT:     bpp: 32
 TBOOT:     type: 1
 TBOOT: Framebuffer at >4GB is not supported
@@ -51,33 +51,37 @@ TBOOT: *********************** TBOOT ***********************
 TBOOT:    2022-03-04 12:00 +0100 1.10.5
 TBOOT: *****************************************************
 TBOOT: command line: logging=serial,memory,vga
-TBOOT: IA32_FEATURE_CONTROL_MSR: 00000005
+TBOOT: IA32_FEATURE_CONTROL_MSR: 0000ff07
 TBOOT: CPU is SMX-capable
-TBOOT: ERR: SENTER disabled by feature control MSR (5)
-TBOOT: IA32_FEATURE_CONTROL_MSR: 00000005
+TBOOT: CPU is VMX-capable
+TBOOT: SMX is enabled
+TBOOT: TXT chipset and all needed capabilities present
+TBOOT: IA32_FEATURE_CONTROL_MSR: 0000ff07
 TBOOT: CPU is SMX-capable
-TBOOT: ERR: SENTER disabled by feature control MSR (5)
+TBOOT: CPU is VMX-capable
+TBOOT: SMX is enabled
+TBOOT: TXT chipset and all needed capabilities present
 TBOOT: BSP is cpu 0
 TBOOT: original e820 map:
 TBOOT:  0000000000000000 - 000000000009f000  (1)
 TBOOT:  000000000009f000 - 0000000000100000  (2)
-TBOOT:  0000000000100000 - 0000000042926000  (1)
-TBOOT:  0000000042926000 - 00000000429bf000  (20)
-TBOOT:  00000000429bf000 - 0000000045dfa000  (2)
-TBOOT:  0000000045dfa000 - 0000000045ee2000  (4)
-TBOOT:  0000000045ee2000 - 0000000045fff000  (3)
-TBOOT:  0000000045fff000 - 0000000046000000  (1)
-TBOOT:  0000000046000000 - 000000004a000000  (2)
-TBOOT:  000000004a200000 - 000000004a400000  (2)
-TBOOT:  000000004b000000 - 0000000050400000  (2)
+TBOOT:  0000000000100000 - 00000000405c4000  (1)
+TBOOT:  00000000405c4000 - 000000004065d000  (20)
+TBOOT:  000000004065d000 - 00000000439fe000  (2)
+TBOOT:  00000000439fe000 - 0000000043ae6000  (4)
+TBOOT:  0000000043ae6000 - 0000000043bff000  (3)
+TBOOT:  0000000043bff000 - 0000000043c00000  (1)
+TBOOT:  0000000043c00000 - 0000000048000000  (2)
+TBOOT:  0000000049e00000 - 000000004a000000  (2)
+TBOOT:  000000004ac00000 - 0000000050400000  (2)
 TBOOT:  00000000c0000000 - 00000000d0000000  (2)
 TBOOT:  00000000fed20000 - 00000000fed80000  (2)
-TBOOT:  00000000ff000000 - 0000000100400000  (2)
-TBOOT:  0000000100400000 - 000000048fc00000  (1)
+TBOOT:  00000000ff000000 - 0000000100000000  (2)
+TBOOT:  0000000100000000 - 000000048fc00000  (1)
 TBOOT: checking if module  is an SINIT for this platform...
 TBOOT: chipset production fused: 1
 TBOOT: chipset ids: vendor: 0x8086, device: 0xb00c, revision: 0x1
-TBOOT: processor family/model/stepping: 0x906a2
+TBOOT: processor family/model/stepping: 0x906a4
 TBOOT: platform id: 0x1c000000000000
 TBOOT:   3 ACM chipset id entries:
 TBOOT:       vendor: 0x8086, device: 0xb00f, flags: 0x1, revision: 0x1, extended: 0x0
@@ -96,14 +100,15 @@ TBOOT: got sinit match on module #2
 TBOOT: no LCP module found
 TBOOT: ELF magic number is not matched, image is not ELF format.
 TBOOT: assuming kernel is Linux format
-TBOOT: get_highest_sized_ram: size 657dc00 -> base 2df3c000, size f721000
-TBOOT: Initrd from 0x370df000 to 0x3d65cc00
+TBOOT: get_highest_sized_ram: size 6565000 -> base 2c740000, size ee85000
+TBOOT: Initrd from 0x35060000 to 0x3b5c5000
 TBOOT: Kernel (protected mode) from 0x2c00000 to 0x36a6c98
 TBOOT: Kernel (real mode) from 0x90000 to 0x93e00
 TBOOT: Linux cmdline from 0x98d00 to 0x99100:
 TBOOT:  root=/dev/mapper/rhel-root ro crashkernel=1G-4G:192M,4G-64G:256M,64G-:
 TBOOT:  512M resume=/dev/mapper/rhel-swap rd.lvm.lv=rhel/root rd.lvm.lv=rhel/s
 TBOOT:  wap rhgb quiet intel_iommu=on noefi
-TBOOT: EFI memmap: memmap base: 0x69808, memmap size: 0x3540
+TBOOT: EFI memmap: memmap base: 0x69808, memmap size: 0x3750
 TBOOT: EFI memmap: descr size: 0x30, descr version: 0x1
 TBOOT: transfering control to kernel @0x2c00000...
+
