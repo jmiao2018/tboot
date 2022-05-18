@@ -1,0 +1,95 @@
+[root@localhost ~]# txt-stat
+Intel(r) TXT Configuration Registers:
+        STS: 0x00000003
+            senter_done: TRUE
+            sexit_done: TRUE
+            mem_config_lock: FALSE
+            private_open: FALSE
+            locality_1_open: FALSE
+            locality_2_open: FALSE
+        ESTS: 0x00
+            txt_reset: FALSE
+        E2STS: 0x0000000000000004
+            secrets: FALSE
+        ERRORCODE: 0x00000000
+        DIDVID: 0x00000001b0118086
+            vendor_id: 0x8086
+            device_id: 0xb011
+            revision_id: 0x1
+        FSBIF: 0xffffffffffffffff
+        QPIIF: 0x000000001d003000
+        SINIT.BASE: 0x00000000
+        SINIT.SIZE: 0B (0x0)
+        HEAP.BASE: 0x00000000
+        HEAP.SIZE: 0B (0x0)
+        DPR: 0x0000000078000081
+            lock: TRUE
+            top: 0x78000000
+            size: 8MB (8388608B)
+        PUBLIC.KEY:
+            06 59 98 a8 58 df 53 41 c5 97 8f 88 9c 69 10 75
+            62 98 81 dd 3c 19 b9 27 b8 61 64 de e5 e2 27 ad
+
+***********************************************************
+         TXT measured launch: TRUE
+         secrets flag set: FALSE
+***********************************************************
+TBOOT log:
+         max_size=32706
+         zip_count=0
+         curr_pos=2417
+         buf:
+TBOOT: Framebuffer info:
+TBOOT:     address: 0xa4000000
+TBOOT:     pitch: 3200
+TBOOT:     width: 800
+TBOOT:     height: 600
+TBOOT:     bpp: 32
+TBOOT:     type: 1
+TBOOT: *********************** TBOOT ***********************
+TBOOT:    2022-03-04 12:00 +0100 1.10.5
+TBOOT: *****************************************************
+TBOOT: command line: logging=serial,memory,vga
+TBOOT: IA32_FEATURE_CONTROL_MSR: 00300005
+TBOOT: CPU is SMX-capable
+TBOOT: ERR: SENTER disabled by feature control MSR (300005)
+TBOOT: IA32_FEATURE_CONTROL_MSR: 00300005
+TBOOT: CPU is SMX-capable
+TBOOT: ERR: SENTER disabled by feature control MSR (300005)
+TBOOT: BSP is cpu 0
+TBOOT: original e820 map:
+TBOOT:  0000000000000000 - 000000000009f000  (1)
+TBOOT:  000000000009f000 - 0000000000100000  (2)
+TBOOT:  0000000000100000 - 0000000072ee0000  (1)
+TBOOT:  0000000072ee0000 - 0000000073031000  (2)
+TBOOT:  0000000073031000 - 00000000732c1000  (20)
+TBOOT:  00000000732c1000 - 0000000074f77000  (2)
+TBOOT:  0000000074f77000 - 00000000772b4000  (4)
+TBOOT:  00000000772b4000 - 00000000777ff000  (3)
+TBOOT:  00000000777ff000 - 0000000077800000  (1)
+TBOOT:  0000000077800000 - 00000000a0000000  (2)
+TBOOT:  00000000fe010000 - 00000000fe011000  (2)
+TBOOT:  0000000100000000 - 0000004080000000  (1)
+TBOOT: checking if module  is an SINIT for this platform...
+TBOOT:   ACM size mismatch: acmod_size=63b4200, acm_hdr->size*4=c0c0c0c0
+TBOOT: no SINIT AC module found
+TBOOT: TXT.SINIT.BASE: 0x0
+TBOOT: TXT.SINIT.SIZE: 0x0 (0)
+TBOOT: SINIT ACM not provided.
+TBOOT: reserving tboot memory log (60000 - 67fff) in e820 table
+TBOOT: no LCP module found
+TBOOT: ELF magic number is not matched, image is not ELF format.
+TBOOT: assuming kernel is Linux format
+TBOOT: get_highest_sized_ram: size 63b4200 -> base 460a6000, size 18c5f000
+TBOOT: Initrd from 0x58950000 to 0x5ed04200
+TBOOT: Kernel (protected mode) from 0x2c00000 to 0x36b1e18
+TBOOT: Kernel (real mode) from 0x90000 to 0x93e00
+TBOOT: Linux cmdline from 0x98d00 to 0x99100:
+TBOOT:  root=/dev/mapper/rhel_icx04-root ro crashkernel=1G-4G:192M,4G-64G:256M
+TBOOT:  ,64G-:512M resume=/dev/mapper/rhel_icx04-swap rd.lvm.lv=rhel_icx04/roo
+TBOOT:  t rd.lvm.lv=rhel_icx04/swap rhgb quiet intel_iommu=off intremap=off in
+TBOOT:  tel_iommu=on noefi
+TBOOT: EFI memmap: memmap base: 0x69808, memmap size: 0x39f0
+TBOOT: EFI memmap: descr size: 0x30, descr version: 0x1
+TBOOT: transfering control to kernel @0x2c00000...
+

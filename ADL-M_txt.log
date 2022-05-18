@@ -1,0 +1,109 @@
+[root@ADLP02 boot]# txt-stat
+Intel(r) TXT Configuration Registers:
+        STS: 0x00000002
+            senter_done: FALSE
+            sexit_done: TRUE
+            mem_config_lock: FALSE
+            private_open: FALSE
+            locality_1_open: FALSE
+            locality_2_open: FALSE
+        ESTS: 0x00
+            txt_reset: FALSE
+        E2STS: 0x0000000000000004
+            secrets: FALSE
+        ERRORCODE: 0x00000000
+        DIDVID: 0x00000001b00c8086
+            vendor_id: 0x8086
+            device_id: 0xb00c
+            revision_id: 0x1
+        FSBIF: 0xffffffffffffffff
+        QPIIF: 0x000000009d003000
+        SINIT.BASE: 0x00000000
+        SINIT.SIZE: 0B (0x0)
+        HEAP.BASE: 0x00000000
+        HEAP.SIZE: 0B (0x0)
+        DPR: 0x0000000000000000
+            lock: FALSE
+            top: 0x00000000
+            size: 0MB (0B)
+        PUBLIC.KEY:
+            87 9a 8f 9c bf 9e 3d 1d 12 dc 9a d7 6d de 34 e6
+            aa 40 36 64 c7 39 db 34 7b 85 8f 0b e0 33 ae 3a
+
+***********************************************************
+         TXT measured launch: FALSE
+         secrets flag set: FALSE
+***********************************************************
+TBOOT log:
+         max_size=32706
+         zip_count=0
+         curr_pos=3260
+         buf:
+TBOOT: Framebuffer info:
+TBOOT:     address: 0x4000000000
+TBOOT:     pitch: 7680
+TBOOT:     width: 1920
+TBOOT:     height: 1200
+TBOOT:     bpp: 32
+TBOOT:     type: 1
+TBOOT: Framebuffer at >4GB is not supported
+TBOOT: *********************** TBOOT ***********************
+TBOOT:    2022-03-04 12:00 +0100 1.10.5
+TBOOT: *****************************************************
+TBOOT: command line: logging=serial,memory,vga
+TBOOT: IA32_FEATURE_CONTROL_MSR: 00000005
+TBOOT: CPU is SMX-capable
+TBOOT: ERR: SENTER disabled by feature control MSR (5)
+TBOOT: IA32_FEATURE_CONTROL_MSR: 00000005
+TBOOT: CPU is SMX-capable
+TBOOT: ERR: SENTER disabled by feature control MSR (5)
+TBOOT: BSP is cpu 0
+TBOOT: original e820 map:
+TBOOT:  0000000000000000 - 000000000009f000  (1)
+TBOOT:  000000000009f000 - 0000000000100000  (2)
+TBOOT:  0000000000100000 - 0000000042926000  (1)
+TBOOT:  0000000042926000 - 00000000429bf000  (20)
+TBOOT:  00000000429bf000 - 0000000045dfa000  (2)
+TBOOT:  0000000045dfa000 - 0000000045ee2000  (4)
+TBOOT:  0000000045ee2000 - 0000000045fff000  (3)
+TBOOT:  0000000045fff000 - 0000000046000000  (1)
+TBOOT:  0000000046000000 - 000000004a000000  (2)
+TBOOT:  000000004a200000 - 000000004a400000  (2)
+TBOOT:  000000004b000000 - 0000000050400000  (2)
+TBOOT:  00000000c0000000 - 00000000d0000000  (2)
+TBOOT:  00000000fed20000 - 00000000fed80000  (2)
+TBOOT:  00000000ff000000 - 0000000100400000  (2)
+TBOOT:  0000000100400000 - 000000048fc00000  (1)
+TBOOT: checking if module  is an SINIT for this platform...
+TBOOT: chipset production fused: 1
+TBOOT: chipset ids: vendor: 0x8086, device: 0xb00c, revision: 0x1
+TBOOT: processor family/model/stepping: 0x906a2
+TBOOT: platform id: 0x1c000000000000
+TBOOT:   3 ACM chipset id entries:
+TBOOT:       vendor: 0x8086, device: 0xb00f, flags: 0x1, revision: 0x1, extended: 0x0
+TBOOT:       vendor: 0x8086, device: 0xb012, flags: 0x1, revision: 0x1, extended: 0x0
+TBOOT:       vendor: 0x8086, device: 0xb00c, flags: 0x1, revision: 0x1, extended: 0x0
+TBOOT:   6 ACM processor id entries:
+TBOOT:       fms: 0x90670, fms_mask: 0xfff3ff0, platform_id: 0x0, platform_mask: 0x0
+TBOOT:       fms: 0x906a0, fms_mask: 0xfff3ff0, platform_id: 0x0, platform_mask: 0x0
+TBOOT: SINIT matches platform
+TBOOT: TXT.SINIT.BASE: 0x0
+TBOOT: TXT.SINIT.SIZE: 0x0 (0)
+TBOOT: BIOS-reserved SINIT size (0) is too small for loaded SINIT (1ff40)
+TBOOT: SINIT ACM not provided.
+TBOOT: reserving tboot memory log (60000 - 67fff) in e820 table
+TBOOT: got sinit match on module #2
+TBOOT: no LCP module found
+TBOOT: ELF magic number is not matched, image is not ELF format.
+TBOOT: assuming kernel is Linux format
+TBOOT: get_highest_sized_ram: size 657dc00 -> base 2df3c000, size f721000
+TBOOT: Initrd from 0x370df000 to 0x3d65cc00
+TBOOT: Kernel (protected mode) from 0x2c00000 to 0x36a6c98
+TBOOT: Kernel (real mode) from 0x90000 to 0x93e00
+TBOOT: Linux cmdline from 0x98d00 to 0x99100:
+TBOOT:  root=/dev/mapper/rhel-root ro crashkernel=1G-4G:192M,4G-64G:256M,64G-:
+TBOOT:  512M resume=/dev/mapper/rhel-swap rd.lvm.lv=rhel/root rd.lvm.lv=rhel/s
+TBOOT:  wap rhgb quiet intel_iommu=on noefi
+TBOOT: EFI memmap: memmap base: 0x69808, memmap size: 0x3540
+TBOOT: EFI memmap: descr size: 0x30, descr version: 0x1
+TBOOT: transfering control to kernel @0x2c00000...

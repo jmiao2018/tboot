@@ -1,0 +1,2126 @@
+[    0.000000] Linux version 5.14.0-83.el9.x86_64 (mockbuild@x86-vm-09.build.eng.bos.redhat.com) (gcc (GCC) 11.3.1 20220421 (Red Hat 11.3.1-2), GNU ld version 2.35.2-19.el9) #1 SMP PREEMPT_DYNAMIC Fri Apr 29 10:27:23 EDT 2022
+[    0.000000] The list of certified hardware and cloud instances for Red Hat Enterprise Linux 9 can be viewed at the Red Hat Ecosystem Catalog, https://catalog.redhat.com.
+[    0.000000] Command line: root=/dev/mapper/rhel-root ro crashkernel=1G-4G:192M,4G-64G:256M,64G-:512M resume=/dev/mapper/rhel-swap rd.lvm.lv=rhel/root rd.lvm.lv=rhel/swap rhgb quiet intel_iommu=on noefi
+[    0.000000] x86/split lock detection: #AC: crashing the kernel on kernel split_locks and warning on user-space split_locks
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x200: 'Protection Keys User registers'
+[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000] x86/fpu: xstate_offset[9]:  832, xstate_sizes[9]:    8
+[    0.000000] x86/fpu: Enabled xstate features 0x207, context size is 840 bytes, using 'compacted' format.
+[    0.000000] signal: max sigframe size: 3632
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000005ffff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000000060000-0x0000000000067fff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000068000-0x000000000009efff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009f000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000405c3fff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000405c4000-0x000000004065cfff] type 20
+[    0.000000] BIOS-e820: [mem 0x000000004065d000-0x00000000439fdfff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000439fe000-0x0000000043ae5fff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x0000000043ae6000-0x0000000043bfefff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x0000000043bff000-0x0000000043bfffff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000043c00000-0x0000000047ffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000049e00000-0x0000000049ffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000004ac00000-0x00000000503fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000c0000000-0x00000000cfffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed20000-0x00000000fed7ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000ff000000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000048fbfffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] efi: EFI v2.70 by Intel
+[    0.000000] efi: ACPI=0x43bfe000 ACPI 2.0=0x43bfe014 TPMFinalLog=0x43a6c000 SMBIOS=0x40761000 MEMATTR=0x3ccb8018 ESRT=0x3ccddd98 MOKvar=0x408a1000 
+[    0.000000] secureboot: Secure boot could not be determined (mode 0)
+[    0.000000] SMBIOS 3.4 present.
+[    0.000000] DMI: Intel Corporation Alder Lake Client Platform/AlderLake-M LP5 RVP, BIOS ADLPFWI1.R00.2397.A00.2109271507 09/27/2021
+[    0.000000] tsc: Detected 1100.000 MHz processor
+[    0.000000] tsc: Detected 1113.600 MHz TSC
+[    0.000007] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000009] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000015] last_pfn = 0x48fc00 max_arch_pfn = 0x400000000
+[    0.000211] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.001624] total RAM covered: 29888M
+[    0.001883] Found optimal setting for mtrr clean up
+[    0.001883]  gran_size: 64K 	chunk_size: 64K 	num_reg: 6  	lose cover RAM: 0G
+[    0.002339] e820: update [mem 0x4c000000-0xffffffff] usable ==> reserved
+[    0.002342] last_pfn = 0x43c00 max_arch_pfn = 0x400000000
+[    0.008644] Using GB pages for direct mapping
+[    0.008923] secureboot: Secure boot could not be determined (mode 0)
+[    0.008924] RAMDISK: [mem 0x35060000-0x3b5c4fff]
+[    0.009414] ACPI: Early table checksum verification disabled
+[    0.009419] ACPI: RSDP 0x0000000043BFE014 000024 (v02 INTEL )
+[    0.009423] ACPI: XSDT 0x0000000043B2E188 000124 (v01 INTEL  ADL-P-M  00000002      01000013)
+[    0.009429] ACPI: FACP 0x0000000043BEB000 000114 (v06 INTEL  ADL-P-M  00000002      01000013)
+[    0.009433] ACPI: DSDT 0x0000000043B62000 085493 (v02 INTEL  ADL-P-M  00000002      01000013)
+[    0.009436] ACPI: FACS 0x0000000043A57000 000040
+[    0.009438] ACPI: SSDT 0x0000000043BFC000 00038C (v02 PmaxDv Pmax_Dev 00000001 INTL 20200717)
+[    0.009440] ACPI: SSDT 0x0000000043BF6000 005D22 (v02 CpuRef CpuSsdt  00003000 INTL 20200717)
+[    0.009443] ACPI: SSDT 0x0000000043BEF000 006CDD (v02 DptfTb DptfTabl 00001000 INTL 20200717)
+[    0.009445] ACPI: SSDT 0x0000000043BEE000 00060E (v02 INTEL  Tpm2Tabl 00001000 INTL 20200717)
+[    0.009447] ACPI: TPM2 0x0000000043BED000 00004C (v04 INTEL  ADL-P-M  00000002      01000013)
+[    0.009450] ACPI: ECDT 0x0000000043BEC000 000069 (v01 INTEL  ADL-P-M  00000002      01000013)
+[    0.009452] ACPI: HPET 0x0000000043BEA000 000038 (v01 INTEL  ADL-P-M  00000002      01000013)
+[    0.009454] ACPI: APIC 0x0000000043BE9000 0001DC (v05 INTEL  ADL-P-M  00000002      01000013)
+[    0.009456] ACPI: MCFG 0x0000000043BE8000 00003C (v01 INTEL  ADL-P-M  00000002      01000013)
+[    0.009459] ACPI: SSDT 0x0000000043B56000 00B374 (v02 INTEL  AdlM_Rvp 00001000 INTL 20200717)
+[    0.009461] ACPI: SSDT 0x0000000043B54000 001F32 (v02 INTEL  Ther_Rvp 00001000 INTL 20200717)
+[    0.009463] ACPI: SSDT 0x0000000043B50000 003C1B (v02 SaSsdt SaSsdt   00003000 INTL 20200717)
+[    0.009465] ACPI: SSDT 0x0000000043B4C000 0035A1 (v02 INTEL  IgfxSsdt 00003000 INTL 20200717)
+[    0.009467] ACPI: SSDT 0x0000000043B3E000 00D999 (v02 INTEL  TcssSsdt 00001000 INTL 20200717)
+[    0.009469] ACPI: LPIT 0x0000000043B3D000 0000CC (v01 INTEL  ADL-P-M  00000002      01000013)
+[    0.009472] ACPI: WSMT 0x0000000043B3C000 000028 (v01 INTEL  ADL-P-M  00000002      01000013)
+[    0.009474] ACPI: SSDT 0x0000000043B39000 002A83 (v02 INTEL  PtidDevc 00001000 INTL 20200717)
+[    0.009476] ACPI: SSDT 0x0000000043B31000 007279 (v02 INTEL  TbtTypeC 00000000 INTL 20200717)
+[    0.009478] ACPI: DBGP 0x0000000043B30000 000034 (v01 INTEL  ADL-P-M  00000002      01000013)
+[    0.009480] ACPI: DBG2 0x0000000043B2F000 000054 (v00 INTEL  ADL-P-M  00000002      01000013)
+[    0.009483] ACPI: NHLT 0x0000000043BFD000 0002F1 (v00 INTEL  ADL-P-M  00000002      01000013)
+[    0.009485] ACPI: SSDT 0x0000000043B2C000 001919 (v02 INTEL  UsbCTabl 00001000 INTL 20200717)
+[    0.009487] ACPI: DMAR 0x0000000043B2B000 000088 (v02 INTEL  ICL      00000002      01000013)
+[    0.009489] ACPI: SSDT 0x0000000043B2A000 000571 (v02 INTEL  xh_adl_M 00000000 INTL 20200717)
+[    0.009492] ACPI: SSDT 0x0000000043B26000 003BD3 (v02 SocGpe SocGpe   00003000 INTL 20200717)
+[    0.009494] ACPI: SSDT 0x0000000043B23000 002B2A (v02 SocCmn SocCmn   00003000 INTL 20200717)
+[    0.009496] ACPI: SSDT 0x0000000043B22000 000144 (v02 Intel  ADebTabl 00001000 INTL 20200717)
+[    0.009498] ACPI: ASF! 0x0000000043B21000 000074 (v32 INTEL  ADL-P-M  00000002      01000013)
+[    0.009501] ACPI: BGRT 0x0000000043B20000 000038 (v01 INTEL  ADL-P-M  00000002      01000013)
+[    0.009503] ACPI: PHAT 0x0000000043B1F000 0007F8 (v00 INTEL  ADL-P-M  00000005 MSFT 0100000D)
+[    0.009505] ACPI: FPDT 0x0000000043B1E000 000044 (v01 INTEL  ADL-P-M  00000002      01000013)
+[    0.009507] ACPI: Reserving FACP table memory at [mem 0x43beb000-0x43beb113]
+[    0.009508] ACPI: Reserving DSDT table memory at [mem 0x43b62000-0x43be7492]
+[    0.009509] ACPI: Reserving FACS table memory at [mem 0x43a57000-0x43a5703f]
+[    0.009510] ACPI: Reserving SSDT table memory at [mem 0x43bfc000-0x43bfc38b]
+[    0.009510] ACPI: Reserving SSDT table memory at [mem 0x43bf6000-0x43bfbd21]
+[    0.009511] ACPI: Reserving SSDT table memory at [mem 0x43bef000-0x43bf5cdc]
+[    0.009512] ACPI: Reserving SSDT table memory at [mem 0x43bee000-0x43bee60d]
+[    0.009512] ACPI: Reserving TPM2 table memory at [mem 0x43bed000-0x43bed04b]
+[    0.009513] ACPI: Reserving ECDT table memory at [mem 0x43bec000-0x43bec068]
+[    0.009514] ACPI: Reserving HPET table memory at [mem 0x43bea000-0x43bea037]
+[    0.009514] ACPI: Reserving APIC table memory at [mem 0x43be9000-0x43be91db]
+[    0.009515] ACPI: Reserving MCFG table memory at [mem 0x43be8000-0x43be803b]
+[    0.009516] ACPI: Reserving SSDT table memory at [mem 0x43b56000-0x43b61373]
+[    0.009516] ACPI: Reserving SSDT table memory at [mem 0x43b54000-0x43b55f31]
+[    0.009517] ACPI: Reserving SSDT table memory at [mem 0x43b50000-0x43b53c1a]
+[    0.009518] ACPI: Reserving SSDT table memory at [mem 0x43b4c000-0x43b4f5a0]
+[    0.009518] ACPI: Reserving SSDT table memory at [mem 0x43b3e000-0x43b4b998]
+[    0.009519] ACPI: Reserving LPIT table memory at [mem 0x43b3d000-0x43b3d0cb]
+[    0.009519] ACPI: Reserving WSMT table memory at [mem 0x43b3c000-0x43b3c027]
+[    0.009520] ACPI: Reserving SSDT table memory at [mem 0x43b39000-0x43b3ba82]
+[    0.009521] ACPI: Reserving SSDT table memory at [mem 0x43b31000-0x43b38278]
+[    0.009521] ACPI: Reserving DBGP table memory at [mem 0x43b30000-0x43b30033]
+[    0.009522] ACPI: Reserving DBG2 table memory at [mem 0x43b2f000-0x43b2f053]
+[    0.009523] ACPI: Reserving NHLT table memory at [mem 0x43bfd000-0x43bfd2f0]
+[    0.009523] ACPI: Reserving SSDT table memory at [mem 0x43b2c000-0x43b2d918]
+[    0.009524] ACPI: Reserving DMAR table memory at [mem 0x43b2b000-0x43b2b087]
+[    0.009525] ACPI: Reserving SSDT table memory at [mem 0x43b2a000-0x43b2a570]
+[    0.009525] ACPI: Reserving SSDT table memory at [mem 0x43b26000-0x43b29bd2]
+[    0.009526] ACPI: Reserving SSDT table memory at [mem 0x43b23000-0x43b25b29]
+[    0.009527] ACPI: Reserving SSDT table memory at [mem 0x43b22000-0x43b22143]
+[    0.009527] ACPI: Reserving ASF! table memory at [mem 0x43b21000-0x43b21073]
+[    0.009528] ACPI: Reserving BGRT table memory at [mem 0x43b20000-0x43b20037]
+[    0.009529] ACPI: Reserving PHAT table memory at [mem 0x43b1f000-0x43b1f7f7]
+[    0.009529] ACPI: Reserving FPDT table memory at [mem 0x43b1e000-0x43b1e043]
+[    0.010003] No NUMA configuration found
+[    0.010004] Faking a node at [mem 0x0000000000000000-0x000000048fbfffff]
+[    0.010011] NODE_DATA(0) allocated [mem 0x48fbd5000-0x48fbfffff]
+[    0.010257] Reserving 256MB of memory at 592MB for crashkernel (System RAM: 15617MB)
+[    0.010279] Zone ranges:
+[    0.010279]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.010281]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.010283]   Normal   [mem 0x0000000100000000-0x000000048fbfffff]
+[    0.010284]   Device   empty
+[    0.010285] Movable zone start for each node
+[    0.010286] Early memory node ranges
+[    0.010286]   node   0: [mem 0x0000000000001000-0x000000000005ffff]
+[    0.010288]   node   0: [mem 0x0000000000068000-0x000000000009efff]
+[    0.010288]   node   0: [mem 0x0000000000100000-0x00000000405c3fff]
+[    0.010289]   node   0: [mem 0x0000000043bff000-0x0000000043bfffff]
+[    0.010290]   node   0: [mem 0x0000000100000000-0x000000048fbfffff]
+[    0.010292] Initmem setup node 0 [mem 0x0000000000001000-0x000000048fbfffff]
+[    0.010295] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.010297] On node 0, zone DMA: 8 pages in unavailable ranges
+[    0.010328] On node 0, zone DMA: 97 pages in unavailable ranges
+[    0.012445] On node 0, zone DMA32: 13883 pages in unavailable ranges
+[    0.012850] On node 0, zone Normal: 17408 pages in unavailable ranges
+[    0.012862] On node 0, zone Normal: 1024 pages in unavailable ranges
+[    0.012905] Reserving Intel graphics memory at [mem 0x4c800000-0x503fffff]
+[    0.015643] ACPI: PM-Timer IO Port: 0x1808
+[    0.015649] ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+[    0.015651] ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+[    0.015652] ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+[    0.015652] ACPI: LAPIC_NMI (acpi_id[0x04] high edge lint[0x1])
+[    0.015653] ACPI: LAPIC_NMI (acpi_id[0x05] high edge lint[0x1])
+[    0.015653] ACPI: LAPIC_NMI (acpi_id[0x06] high edge lint[0x1])
+[    0.015654] ACPI: LAPIC_NMI (acpi_id[0x07] high edge lint[0x1])
+[    0.015654] ACPI: LAPIC_NMI (acpi_id[0x08] high edge lint[0x1])
+[    0.015655] ACPI: LAPIC_NMI (acpi_id[0x09] high edge lint[0x1])
+[    0.015655] ACPI: LAPIC_NMI (acpi_id[0x0a] high edge lint[0x1])
+[    0.015656] ACPI: LAPIC_NMI (acpi_id[0x0b] high edge lint[0x1])
+[    0.015656] ACPI: LAPIC_NMI (acpi_id[0x0c] high edge lint[0x1])
+[    0.015657] ACPI: LAPIC_NMI (acpi_id[0x0d] high edge lint[0x1])
+[    0.015657] ACPI: LAPIC_NMI (acpi_id[0x0e] high edge lint[0x1])
+[    0.015658] ACPI: LAPIC_NMI (acpi_id[0x0f] high edge lint[0x1])
+[    0.015658] ACPI: LAPIC_NMI (acpi_id[0x10] high edge lint[0x1])
+[    0.015659] ACPI: LAPIC_NMI (acpi_id[0x11] high edge lint[0x1])
+[    0.015660] ACPI: LAPIC_NMI (acpi_id[0x12] high edge lint[0x1])
+[    0.015660] ACPI: LAPIC_NMI (acpi_id[0x13] high edge lint[0x1])
+[    0.015661] ACPI: LAPIC_NMI (acpi_id[0x14] high edge lint[0x1])
+[    0.015661] ACPI: LAPIC_NMI (acpi_id[0x15] high edge lint[0x1])
+[    0.015662] ACPI: LAPIC_NMI (acpi_id[0x16] high edge lint[0x1])
+[    0.015662] ACPI: LAPIC_NMI (acpi_id[0x17] high edge lint[0x1])
+[    0.015663] ACPI: LAPIC_NMI (acpi_id[0x00] high edge lint[0x1])
+[    0.015746] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-119
+[    0.015749] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.015750] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.015753] ACPI: Using ACPI (MADT) for SMP configuration information
+[    0.015754] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.015758] TSC deadline timer available
+[    0.015759] smpboot: Allowing 12 CPUs, 0 hotplug CPUs
+[    0.015773] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.015775] PM: hibernation: Registered nosave memory: [mem 0x00060000-0x00067fff]
+[    0.015776] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x000fffff]
+[    0.015778] PM: hibernation: Registered nosave memory: [mem 0x405c4000-0x4065cfff]
+[    0.015778] PM: hibernation: Registered nosave memory: [mem 0x4065d000-0x439fdfff]
+[    0.015779] PM: hibernation: Registered nosave memory: [mem 0x439fe000-0x43ae5fff]
+[    0.015779] PM: hibernation: Registered nosave memory: [mem 0x43ae6000-0x43bfefff]
+[    0.015781] PM: hibernation: Registered nosave memory: [mem 0x43c00000-0x47ffffff]
+[    0.015781] PM: hibernation: Registered nosave memory: [mem 0x48000000-0x49dfffff]
+[    0.015782] PM: hibernation: Registered nosave memory: [mem 0x49e00000-0x49ffffff]
+[    0.015782] PM: hibernation: Registered nosave memory: [mem 0x4a000000-0x4abfffff]
+[    0.015783] PM: hibernation: Registered nosave memory: [mem 0x4ac00000-0x503fffff]
+[    0.015783] PM: hibernation: Registered nosave memory: [mem 0x50400000-0xbfffffff]
+[    0.015784] PM: hibernation: Registered nosave memory: [mem 0xc0000000-0xcfffffff]
+[    0.015784] PM: hibernation: Registered nosave memory: [mem 0xd0000000-0xfed1ffff]
+[    0.015785] PM: hibernation: Registered nosave memory: [mem 0xfed20000-0xfed7ffff]
+[    0.015785] PM: hibernation: Registered nosave memory: [mem 0xfed80000-0xfeffffff]
+[    0.015786] PM: hibernation: Registered nosave memory: [mem 0xff000000-0xffffffff]
+[    0.015787] [mem 0x50400000-0xbfffffff] available for PCI devices
+[    0.015788] Booting paravirtualized kernel on bare hardware
+[    0.015791] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.020518] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:12 nr_cpu_ids:12 nr_node_ids:1
+[    0.021548] percpu: Embedded 53 pages/cpu s180224 r8192 d28672 u262144
+[    0.021556] pcpu-alloc: s180224 r8192 d28672 u262144 alloc=1*2097152
+[    0.021558] pcpu-alloc: [0] 00 01 02 03 04 05 06 07 [0] 08 09 10 11 -- -- -- -- 
+[    0.021590] Built 1 zonelists, mobility grouping on.  Total pages: 3935421
+[    0.021591] Policy zone: Normal
+[    0.021594] Kernel command line: root=/dev/mapper/rhel-root ro crashkernel=1G-4G:192M,4G-64G:256M,64G-:512M resume=/dev/mapper/rhel-swap rd.lvm.lv=rhel/root rd.lvm.lv=rhel/swap rhgb quiet intel_iommu=on noefi
+[    0.021673] DMAR: IOMMU enabled
+[    0.021687] Unknown kernel command line parameters "rhgb intel_iommu=on", will be passed to user space.
+[    0.024909] Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[    0.026456] Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.026544] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.065329] Memory: 752760K/15992172K available (14345K kernel code, 5950K rwdata, 9060K rodata, 2552K init, 7492K bss, 767524K reserved, 0K cma-reserved)
+[    0.065335] random: get_random_u64 called from kmem_cache_open+0x1e/0x300 with crng_init=0
+[    0.065450] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=12, Nodes=1
+[    0.065461] ftrace: allocating 43256 entries in 169 pages
+[    0.078277] ftrace: allocated 169 pages with 4 groups
+[    0.078885] Dynamic Preempt: voluntary
+[    0.078921] rcu: Preemptible hierarchical RCU implementation.
+[    0.078922] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=12.
+[    0.078923] 	Trampoline variant of Tasks RCU enabled.
+[    0.078924] 	Rude variant of Tasks RCU enabled.
+[    0.078924] 	Tracing variant of Tasks RCU enabled.
+[    0.078925] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.078926] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=12
+[    0.082115] NR_IRQS: 524544, nr_irqs: 2152, preallocated irqs: 16
+[    0.082743] random: crng done (trusting CPU's manufacturer)
+[    0.082769] Console: colour dummy device 80x25
+[    0.082781] printk: console [tty0] enabled
+[    0.082797] ACPI: Core revision 20210604
+[    0.083493] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 99544814920 ns
+[    0.083711] APIC: Switch to symmetric I/O mode setup
+[    0.083714] DMAR: Host address width 39
+[    0.083715] DMAR: DRHD base: 0x000000fed90000 flags: 0x0
+[    0.083720] DMAR: dmar0: reg_base_addr fed90000 ver 4:0 cap 9c0000c40660462 ecap 29a08f0505e
+[    0.083722] DMAR: DRHD base: 0x000000fed91000 flags: 0x1
+[    0.083725] DMAR: dmar1: reg_base_addr fed91000 ver 5:0 cap 8d2008c40660462 ecap f050da
+[    0.083728] DMAR: RMRR base: 0x0000004c000000 end: 0x000000503fffff
+[    0.083731] DMAR-IR: IOAPIC id 2 under DRHD base  0xfed91000 IOMMU 1
+[    0.083733] DMAR-IR: HPET id 0 under DRHD base 0xfed91000
+[    0.083734] DMAR-IR: Queued invalidation will be enabled to support x2apic and Intr-remapping.
+[    0.088161] DMAR-IR: Enabled IRQ remapping in x2apic mode
+[    0.088164] x2apic enabled
+[    0.088217] Switched APIC routing to cluster x2apic.
+[    0.099890] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.104633] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x100d48ce7a0, max_idle_ns: 440795212195 ns
+[    0.104640] Calibrating delay loop (skipped), value calculated using timer frequency.. 2227.20 BogoMIPS (lpj=1113600)
+[    0.104643] pid_max: default: 32768 minimum: 301
+[    0.104679] LSM: Security Framework initializing
+[    0.104691] Yama: becoming mindful.
+[    0.104698] SELinux:  Initializing.
+[    0.104723] LSM support for eBPF active
+[    0.104805] Mount-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.104862] Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.105214] x86/tme: not enabled by BIOS
+[    0.105233] CPU0: Thermal monitoring enabled (TM1)
+[    0.105237] x86/cpu: User Mode Instruction Prevention (UMIP) activated
+[    0.105403] process: using mwait in idle threads
+[    0.105406] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+[    0.105407] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+[    0.105412] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.105414] Spectre V2 : Mitigation: Enhanced IBRS
+[    0.105415] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.105417] Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+[    0.105418] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+[    0.109303] Freeing SMP alternatives memory: 36K
+[    0.109744] smpboot: Estimated ratio of average max frequency by base frequency (times 1024): 3723
+[    0.109785] smpboot: CPU0: Genuine Intel(R) 0000 (family: 0x6, model: 0x9a, stepping: 0x4)
+[    0.109872] mce: [Hardware Error]: Machine check events logged
+[    0.109873] mce: [Hardware Error]: CPU 0: Machine Check: 0 Bank 6: 880000800004008f
+[    0.109880] mce: [Hardware Error]: TSC 0 MISC 5c000000 
+[    0.109883] mce: [Hardware Error]: PROCESSOR 0:906a4 TIME 1652879870 SOCKET 0 APIC 0 microcode 40c
+[    0.109918] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.109921] cblist_init_generic: Setting shift to 4 and lim to 1.
+[    0.109933] cblist_init_generic: Setting shift to 4 and lim to 1.
+[    0.109946] cblist_init_generic: Setting shift to 4 and lim to 1.
+[    0.109958] Performance Events: XSAVE Architectural LBR, PEBS fmt4+-baseline,  AnyThread deprecated, Alderlake Hybrid events, 32-deep LBR, full-width counters, Intel PMU driver.
+[    0.110099] core: cpu_core PMU driver: 
+[    0.110100] ... version:                5
+[    0.110102] ... bit width:              48
+[    0.110105] ... generic registers:      8
+[    0.110105] ... value mask:             0000ffffffffffff
+[    0.110106] ... max period:             00007fffffffffff
+[    0.110106] ... fixed-purpose events:   4
+[    0.110107] ... event mask:             0001000f000000ff
+[    0.110172] rcu: Hierarchical SRCU implementation.
+[    0.111032] NMI watchdog: Enabled. Permanently consumes one hw-PMU counter.
+[    0.111114] smp: Bringing up secondary CPUs ...
+[    0.111168] x86: Booting SMP configuration:
+[    0.111168] .... node  #0, CPUs:        #1  #2  #3  #4
+[    0.012960] core: cpu_atom PMU driver: PEBS-via-PT 
+[    0.012960] ... version:                5
+[    0.012960] ... bit width:              48
+[    0.012960] ... generic registers:      6
+[    0.012960] ... value mask:             0000ffffffffffff
+[    0.012960] ... max period:             00007fffffffffff
+[    0.012960] ... fixed-purpose events:   3
+[    0.012960] ... event mask:             000000070000003f
+[    0.119228]   #5  #6  #7  #8  #9 #10 #11
+[    0.137853] smp: Brought up 1 node, 12 CPUs
+[    0.137853] smpboot: Max logical packages: 1
+[    0.137853] smpboot: Total of 12 processors activated (26726.40 BogoMIPS)
+[    0.162700] node 0 deferred pages initialised in 24ms
+[    0.164118] devtmpfs: initialized
+[    0.164118] x86/mm: Memory block size: 128MB
+[    0.164705] ACPI: PM: Registering ACPI NVS region [mem 0x439fe000-0x43ae5fff] (950272 bytes)
+[    0.164726] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.164740] futex hash table entries: 4096 (order: 6, 262144 bytes, linear)
+[    0.164823] pinctrl core: initialized pinctrl subsystem
+[    0.164987] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.165072] DMA: preallocated 2048 KiB GFP_KERNEL pool for atomic allocations
+[    0.165080] DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.165089] DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.165096] audit: initializing netlink subsys (disabled)
+[    0.165100] audit: type=2000 audit(1652879870.070:1): state=initialized audit_enabled=0 res=1
+[    0.165100] thermal_sys: Registered thermal governor 'fair_share'
+[    0.165100] thermal_sys: Registered thermal governor 'step_wise'
+[    0.165100] thermal_sys: Registered thermal governor 'user_space'
+[    0.165100] cpuidle: using governor menu
+[    0.165657] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.165759] PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xc0000000-0xcfffffff] (base 0xc0000000)
+[    0.165764] PCI: MMCONFIG at [mem 0xc0000000-0xcfffffff] reserved in E820
+[    0.165781] PCI: Using configuration type 1 for base access
+[    0.166162] ENERGY_PERF_BIAS: Set to 'normal', was 'performance'
+[    0.167296] Kprobes globally optimized
+[    0.167299] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.167299] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.167299] cryptd: max_cpu_qlen set to 1000
+[    0.167661] ACPI: PRMT not present
+[    0.167668] ACPI: Added _OSI(Module Device)
+[    0.167669] ACPI: Added _OSI(Processor Device)
+[    0.167670] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.167671] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.167672] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.167672] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.167673] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    0.281660] ACPI: 17 ACPI AML tables successfully acquired and loaded
+[    0.283027] ACPI: EC: EC started
+[    0.283027] ACPI: EC: interrupt blocked
+[    0.312290] ACPI: EC: EC_CMD/EC_SC=0x66, EC_DATA=0x62
+[    0.312291] ACPI: EC: Boot ECDT EC used to handle transactions
+[    0.346406] ACPI: Dynamic OEM Table Load:
+[    0.346421] ACPI: SSDT 0xFFFF8F0201163800 0001AB (v02 PmRef  Cpu0Psd  00003000 INTL 20200717)
+[    0.347587] ACPI: \_SB_.PR00: _OSC native thermal LVT Acked
+[    0.349265] ACPI: USB4 _OSC: OS supports USB3+ DisplayPort+ PCIe+ XDomain+
+[    0.349267] ACPI: USB4 _OSC: OS controls USB3+ DisplayPort+ PCIe+ XDomain+
+[    0.350811] ACPI: Dynamic OEM Table Load:
+[    0.350819] ACPI: SSDT 0xFFFF8F03FFA88000 00047F (v02 PmRef  Cpu0Cst  00003001 INTL 20200717)
+[    0.352054] ACPI: Dynamic OEM Table Load:
+[    0.352061] ACPI: SSDT 0xFFFF8F02010FF400 00032F (v02 PmRef  Cpu0Ist  00003000 INTL 20200717)
+[    0.353302] ACPI: Dynamic OEM Table Load:
+[    0.353309] ACPI: SSDT 0xFFFF8F03FFA8D800 00044D (v02 PmRef  Cpu0Hwp  00003000 INTL 20200717)
+[    0.354775] ACPI: Dynamic OEM Table Load:
+[    0.354785] ACPI: SSDT 0xFFFF8F0200AC0000 001BAF (v02 PmRef  ApIst    00003000 INTL 20200717)
+[    0.356490] ACPI: Dynamic OEM Table Load:
+[    0.356497] ACPI: SSDT 0xFFFF8F03FFA92000 001038 (v02 PmRef  ApHwp    00003000 INTL 20200717)
+[    0.358040] ACPI: Dynamic OEM Table Load:
+[    0.358048] ACPI: SSDT 0xFFFF8F03FFA90000 001349 (v02 PmRef  ApPsd    00003000 INTL 20200717)
+[    0.359683] ACPI: Dynamic OEM Table Load:
+[    0.359691] ACPI: SSDT 0xFFFF8F0200121000 000FBB (v02 PmRef  ApCst    00003000 INTL 20200717)
+[    0.365358] ACPI: Interpreter enabled
+[    0.365430] ACPI: PM: (supports S0 S3 S4 S5)
+[    0.365431] ACPI: Using IOAPIC for interrupt routing
+[    0.365483] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.366999] ACPI: Enabled 8 GPEs in block 00 to 7F
+[    0.367812] ACPI: PM: Power Resource [PXP]
+[    0.482471] ACPI: PM: Power Resource [PAUD]
+[    0.492483] ACPI: PM: Power Resource [WRST]
+[    0.493911] ACPI: PM: Power Resource [PXP]
+[    0.494904] ACPI: PM: Power Resource [PXP]
+[    0.497308] ACPI: PM: Power Resource [PXP]
+[    0.609465] ACPI: PM: Power Resource [WRST]
+[    0.609478] ACPI: PM: Power Resource [DRST]
+[    0.617759] ACPI: PM: Power Resource [TBT0]
+[    0.617769] ACPI: PM: Power Resource [TBT1]
+[    0.617778] ACPI: PM: Power Resource [D3C]
+[    0.836611] ACPI: PM: Power Resource [FN00]
+[    0.836647] ACPI: PM: Power Resource [FN01]
+[    0.836682] ACPI: PM: Power Resource [FN02]
+[    0.836713] ACPI: PM: Power Resource [FN03]
+[    0.836745] ACPI: PM: Power Resource [FN04]
+[    0.837187] ACPI: PM: Power Resource [PIN]
+[    0.837412] ACPI: PCI Root Bridge [PC00] (domain 0000 [bus 00-fe])
+[    0.837418] acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    0.838850] acpi PNP0A08:00: _OSC: platform does not support [AER]
+[    0.841635] acpi PNP0A08:00: _OSC: OS now controls [PCIeHotplug SHPCHotplug PME PCIeCapability LTR DPC]
+[    0.845302] PCI host bridge to bus 0000:00
+[    0.845303] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.845305] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.845306] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.845307] pci_bus 0000:00: root bus resource [mem 0x50400000-0xbfffffff window]
+[    0.845307] pci_bus 0000:00: root bus resource [mem 0x4000000000-0x7fffffffff window]
+[    0.845308] pci_bus 0000:00: root bus resource [bus 00-fe]
+[    0.847329] pci 0000:00:00.0: [8086:4602] type 00 class 0x060000
+[    0.849667] pci 0000:00:02.0: [8086:46aa] type 00 class 0x030000
+[    0.849676] pci 0000:00:02.0: reg 0x10: [mem 0x603c000000-0x603cffffff 64bit]
+[    0.849682] pci 0000:00:02.0: reg 0x18: [mem 0x4000000000-0x400fffffff 64bit pref]
+[    0.849686] pci 0000:00:02.0: reg 0x20: [io  0x3000-0x303f]
+[    0.849707] pci 0000:00:02.0: BAR 2: assigned to efifb
+[    0.849709] pci 0000:00:02.0: DMAR: Skip IOMMU disabling for graphics
+[    0.849739] pci 0000:00:02.0: reg 0x344: [mem 0x00000000-0x00ffffff 64bit]
+[    0.849740] pci 0000:00:02.0: VF(n) BAR0 space: [mem 0x00000000-0x06ffffff 64bit] (contains BAR0 for 7 VFs)
+[    0.849744] pci 0000:00:02.0: reg 0x34c: [mem 0x00000000-0x1fffffff 64bit pref]
+[    0.849745] pci 0000:00:02.0: VF(n) BAR2 space: [mem 0x00000000-0xdfffffff 64bit pref] (contains BAR2 for 7 VFs)
+[    0.851799] pci 0000:00:04.0: [8086:461d] type 00 class 0x118000
+[    0.851812] pci 0000:00:04.0: reg 0x10: [mem 0x603d140000-0x603d15ffff 64bit]
+[    0.854055] pci 0000:00:06.0: [8086:464d] type 01 class 0x060400
+[    0.854185] pci 0000:00:06.0: PME# supported from D0 D3hot D3cold
+[    0.856837] pci 0000:00:07.0: [8086:466e] type 01 class 0x060400
+[    0.856910] pci 0000:00:07.0: PME# supported from D0 D3hot D3cold
+[    0.856935] pci 0000:00:07.0: DPC: RP PIO log size 0 is invalid
+[    0.859502] pci 0000:00:07.1: [8086:463f] type 01 class 0x060400
+[    0.859574] pci 0000:00:07.1: PME# supported from D0 D3hot D3cold
+[    0.859601] pci 0000:00:07.1: DPC: RP PIO log size 0 is invalid
+[    0.862244] pci 0000:00:08.0: [8086:464f] type 00 class 0x088000
+[    0.862253] pci 0000:00:08.0: reg 0x10: [mem 0x603d19b000-0x603d19bfff 64bit]
+[    0.864358] pci 0000:00:0d.0: [8086:461e] type 00 class 0x0c0330
+[    0.864367] pci 0000:00:0d.0: reg 0x10: [mem 0x603d170000-0x603d17ffff 64bit]
+[    0.864405] pci 0000:00:0d.0: PME# supported from D3hot D3cold
+[    0.866708] pci 0000:00:0d.2: [8086:463e] type 00 class 0x0c0340
+[    0.866718] pci 0000:00:0d.2: reg 0x10: [mem 0x603d100000-0x603d13ffff 64bit]
+[    0.866725] pci 0000:00:0d.2: reg 0x18: [mem 0x603d19a000-0x603d19afff 64bit]
+[    0.866759] pci 0000:00:0d.2: supports D1 D2
+[    0.866759] pci 0000:00:0d.2: PME# supported from D0 D1 D2 D3hot D3cold
+[    0.869431] pci 0000:00:10.0: [8086:51d8] type 00 class 0x0c8000
+[    0.870125] pci 0000:00:10.0: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    0.875168] pci 0000:00:10.6: [8086:51d0] type 00 class 0x090100
+[    0.875196] pci 0000:00:10.6: reg 0x10: [mem 0x603d180000-0x603d187fff 64bit]
+[    0.875400] pci 0000:00:10.6: PME# supported from D3hot D3cold
+[    0.877610] pci 0000:00:14.0: [8086:51ed] type 00 class 0x0c0330
+[    0.877632] pci 0000:00:14.0: reg 0x10: [mem 0x603d160000-0x603d16ffff 64bit]
+[    0.877725] pci 0000:00:14.0: PME# supported from D3hot D3cold
+[    0.879064] pci 0000:00:14.2: [8086:51ef] type 00 class 0x050000
+[    0.879085] pci 0000:00:14.2: reg 0x10: [mem 0x603d18c000-0x603d18ffff 64bit]
+[    0.879098] pci 0000:00:14.2: reg 0x18: [mem 0x603d198000-0x603d198fff 64bit]
+[    0.881734] pci 0000:00:15.0: [8086:51e8] type 00 class 0x0c8000
+[    0.882464] pci 0000:00:15.0: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    0.888001] pci 0000:00:15.1: [8086:51e9] type 00 class 0x0c8000
+[    0.888685] pci 0000:00:15.1: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    0.893824] pci 0000:00:16.0: [8086:51e0] type 00 class 0x078000
+[    0.893848] pci 0000:00:16.0: reg 0x10: [mem 0x603d195000-0x603d195fff 64bit]
+[    0.893941] pci 0000:00:16.0: PME# supported from D3hot
+[    0.895526] pci 0000:00:16.3: [8086:51e3] type 00 class 0x070002
+[    0.895547] pci 0000:00:16.3: reg 0x10: [io  0x3060-0x3067]
+[    0.895557] pci 0000:00:16.3: reg 0x14: [mem 0x6c701000-0x6c701fff]
+[    0.898277] pci 0000:00:19.0: [8086:51c5] type 00 class 0x0c8000
+[    0.898978] pci 0000:00:19.0: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    0.904413] pci 0000:00:19.1: [8086:51c6] type 00 class 0x0c8000
+[    0.905124] pci 0000:00:19.1: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    0.910290] pci 0000:00:1d.0: [8086:51b0] type 01 class 0x060400
+[    0.910402] pci 0000:00:1d.0: PME# supported from D0 D3hot D3cold
+[    0.912942] pci 0000:00:1d.1: [8086:51b1] type 01 class 0x060400
+[    0.913056] pci 0000:00:1d.1: PME# supported from D0 D3hot D3cold
+[    0.916209] pci 0000:00:1e.0: [8086:51a8] type 00 class 0x078000
+[    0.916928] pci 0000:00:1e.0: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    0.922541] pci 0000:00:1e.3: [8086:51ab] type 00 class 0x0c8000
+[    0.923270] pci 0000:00:1e.3: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    0.928359] pci 0000:00:1f.0: [8086:5187] type 00 class 0x060100
+[    0.930652] pci 0000:00:1f.3: [8086:51cc] type 00 class 0x040100
+[    0.930706] pci 0000:00:1f.3: reg 0x10: [mem 0x603d188000-0x603d18bfff 64bit]
+[    0.930777] pci 0000:00:1f.3: reg 0x20: [mem 0x603d000000-0x603d0fffff 64bit]
+[    0.930915] pci 0000:00:1f.3: PME# supported from D3hot D3cold
+[    0.933664] pci 0000:00:1f.4: [8086:51a3] type 00 class 0x0c0500
+[    0.933692] pci 0000:00:1f.4: reg 0x10: [mem 0x603d190000-0x603d1900ff 64bit]
+[    0.933719] pci 0000:00:1f.4: reg 0x20: [io  0xefa0-0xefbf]
+[    0.934931] pci 0000:00:1f.5: [8086:51a4] type 00 class 0x0c8000
+[    0.934951] pci 0000:00:1f.5: reg 0x10: [mem 0xfe010000-0xfe010fff]
+[    0.935656] pci 0000:01:00.0: [8086:f1aa] type 00 class 0x010802
+[    0.935672] pci 0000:01:00.0: reg 0x10: [mem 0x6c500000-0x6c503fff 64bit]
+[    0.935791] pci 0000:01:00.0: reg 0x1ac: [mem 0x00000000-0x00003fff 64bit]
+[    0.935792] pci 0000:01:00.0: VF(n) BAR0 space: [mem 0x00000000-0x0001ffff 64bit] (contains BAR0 for 8 VFs)
+[    0.936631] pci 0000:00:06.0: PCI bridge to [bus 01]
+[    0.936634] pci 0000:00:06.0:   bridge window [mem 0x6c500000-0x6c5fffff]
+[    0.936663] pci 0000:00:07.0: PCI bridge to [bus 02-2b]
+[    0.936666] pci 0000:00:07.0:   bridge window [mem 0x60000000-0x6c1fffff]
+[    0.936670] pci 0000:00:07.0:   bridge window [mem 0x6000000000-0x601bffffff 64bit pref]
+[    0.936697] pci 0000:00:07.1: PCI bridge to [bus 2c-55]
+[    0.936700] pci 0000:00:07.1:   bridge window [mem 0x52000000-0x5e1fffff]
+[    0.936703] pci 0000:00:07.1:   bridge window [mem 0x6020000000-0x603bffffff 64bit pref]
+[    0.936792] pci 0000:56:00.0: [8086:15f2] type 00 class 0x020000
+[    0.936815] pci 0000:56:00.0: reg 0x10: [mem 0x6c300000-0x6c3fffff]
+[    0.936851] pci 0000:56:00.0: reg 0x1c: [mem 0x6c400000-0x6c403fff]
+[    0.936887] pci 0000:56:00.0: reg 0x30: [mem 0xfff00000-0xffffffff pref]
+[    0.936993] pci 0000:56:00.0: PME# supported from D0 D3hot D3cold
+[    0.937135] pci 0000:00:1d.0: PCI bridge to [bus 56]
+[    0.937140] pci 0000:00:1d.0:   bridge window [mem 0x6c300000-0x6c4fffff]
+[    0.937470] pci 0000:57:00.0: [8086:2725] type 00 class 0x028000
+[    0.937542] pci 0000:57:00.0: reg 0x10: [mem 0x6c200000-0x6c203fff 64bit]
+[    0.937828] pci 0000:57:00.0: PME# supported from D0 D3hot D3cold
+[    0.940243] pci 0000:00:1d.1: PCI bridge to [bus 57]
+[    0.940248] pci 0000:00:1d.1:   bridge window [mem 0x6c200000-0x6c2fffff]
+[    1.301028] ACPI: EC: interrupt unblocked
+[    1.301029] ACPI: EC: event unblocked
+[    1.301052] ACPI: EC: EC_CMD/EC_SC=0x66, EC_DATA=0x62
+[    1.301053] ACPI: EC: GPE=0x6e
+[    1.301054] ACPI: \_SB_.PC00.LPCB.H_EC: Boot ECDT EC initialization complete
+[    1.301055] ACPI: \_SB_.PC00.LPCB.H_EC: EC: Used to handle transactions and events
+[    1.301159] iommu: Default domain type: Translated 
+[    1.301159] iommu: DMA domain TLB invalidation policy: lazy mode 
+[    1.301159] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    1.301159] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    1.301159] pci 0000:00:02.0: vgaarb: bridge control possible
+[    1.301159] vgaarb: loaded
+[    1.301159] SCSI subsystem initialized
+[    1.301159] ACPI: bus type USB registered
+[    1.301159] usbcore: registered new interface driver usbfs
+[    1.301159] usbcore: registered new interface driver hub
+[    1.301159] usbcore: registered new device driver usb
+[    1.301159] pps_core: LinuxPPS API ver. 1 registered
+[    1.301159] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.301159] PTP clock support registered
+[    1.301159] EDAC MC: Ver: 3.0.0
+[    1.302861] NetLabel: Initializing
+[    1.302861] NetLabel:  domain hash size = 128
+[    1.302861] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    1.302861] NetLabel:  unlabeled traffic allowed by default
+[    1.302861] PCI: Using ACPI for IRQ routing
+[    1.377762] PCI: pci_cache_line_size set to 64 bytes
+[    1.379126] pci 0000:00:1f.5: can't claim BAR 0 [mem 0xfe010000-0xfe010fff]: no compatible bridge window
+[    1.380184] e820: reserve RAM buffer [mem 0x0009f000-0x0009ffff]
+[    1.380186] e820: reserve RAM buffer [mem 0x405c4000-0x43ffffff]
+[    1.380187] e820: reserve RAM buffer [mem 0x43c00000-0x43ffffff]
+[    1.380188] e820: reserve RAM buffer [mem 0x48fc00000-0x48fffffff]
+[    1.380893] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0
+[    1.380899] hpet0: 8 comparators, 64-bit 19.200000 MHz counter
+[    1.382686] clocksource: Switched to clocksource tsc-early
+[    1.388926] VFS: Disk quotas dquot_6.6.0
+[    1.388934] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.388968] pnp: PnP ACPI init
+[    1.389938] system 00:00: [io  0x06a4] has been reserved
+[    1.389940] system 00:00: [io  0x06a0] has been reserved
+[    1.390260] system 00:01: [io  0x0680-0x069f] has been reserved
+[    1.390262] system 00:01: [io  0x164e-0x164f] has been reserved
+[    1.390368] system 00:02: [io  0x1854-0x1857] has been reserved
+[    1.393861] pnp 00:03: disabling [mem 0xc0000000-0xcfffffff] because it overlaps 0000:00:02.0 BAR 9 [mem 0x00000000-0xdfffffff 64bit pref]
+[    1.393864] pnp 00:03: disabling [mem 0x413b0000-0x413bffff] because it overlaps 0000:00:02.0 BAR 9 [mem 0x00000000-0xdfffffff 64bit pref]
+[    1.393881] system 00:03: [mem 0xfedc0000-0xfedc7fff] has been reserved
+[    1.393882] system 00:03: [mem 0xfeda0000-0xfeda0fff] has been reserved
+[    1.393883] system 00:03: [mem 0xfeda1000-0xfeda1fff] has been reserved
+[    1.393884] system 00:03: [mem 0xfed20000-0xfed7ffff] could not be reserved
+[    1.393885] system 00:03: [mem 0xfed90000-0xfed93fff] could not be reserved
+[    1.393886] system 00:03: [mem 0xfed45000-0xfed8ffff] could not be reserved
+[    1.393887] system 00:03: [mem 0xfee00000-0xfeefffff] has been reserved
+[    1.394839] system 00:04: [io  0x2000-0x20fe] has been reserved
+[    1.395298] pnp 00:06: disabling [mem 0x00000000-0x0009cfff] because it overlaps 0000:00:02.0 BAR 7 [mem 0x00000000-0x06ffffff 64bit]
+[    1.395300] pnp 00:06: disabling [mem 0x00000000-0x0009cfff disabled] because it overlaps 0000:00:02.0 BAR 9 [mem 0x00000000-0xdfffffff 64bit pref]
+[    1.395665] pnp: PnP ACPI: found 7 devices
+[    1.400883] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    1.400931] NET: Registered PF_INET protocol family
+[    1.401447] IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    1.402812] tcp_listen_portaddr_hash hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[    1.402851] TCP established hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    1.403082] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes, linear)
+[    1.403299] TCP: Hash tables configured (established 131072 bind 65536)
+[    1.403473] MPTCP token hash table entries: 16384 (order: 6, 393216 bytes, linear)
+[    1.403500] UDP hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    1.403555] UDP-Lite hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    1.403787] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    1.403793] NET: Registered PF_XDP protocol family
+[    1.403798] pci 0000:56:00.0: can't claim BAR 6 [mem 0xfff00000-0xffffffff pref]: no compatible bridge window
+[    1.403803] pci 0000:00:07.0: bridge window [io  0x1000-0x0fff] to [bus 02-2b] add_size 1000
+[    1.403805] pci 0000:00:07.1: bridge window [io  0x1000-0x0fff] to [bus 2c-55] add_size 1000
+[    1.403815] pci 0000:00:02.0: BAR 9: assigned [mem 0x4020000000-0x40ffffffff 64bit pref]
+[    1.403818] pci 0000:00:02.0: BAR 7: assigned [mem 0x4010000000-0x4016ffffff 64bit]
+[    1.403822] pci 0000:00:07.0: BAR 13: assigned [io  0x4000-0x4fff]
+[    1.403823] pci 0000:00:07.1: BAR 13: assigned [io  0x5000-0x5fff]
+[    1.403825] pci 0000:00:10.0: BAR 0: assigned [mem 0x4017000000-0x4017000fff 64bit]
+[    1.404173] pci 0000:00:15.0: BAR 0: assigned [mem 0x4017001000-0x4017001fff 64bit]
+[    1.404514] pci 0000:00:15.1: BAR 0: assigned [mem 0x4017002000-0x4017002fff 64bit]
+[    1.404856] pci 0000:00:19.0: BAR 0: assigned [mem 0x4017003000-0x4017003fff 64bit]
+[    1.405196] pci 0000:00:19.1: BAR 0: assigned [mem 0x4017004000-0x4017004fff 64bit]
+[    1.405537] pci 0000:00:1e.0: BAR 0: assigned [mem 0x4017005000-0x4017005fff 64bit]
+[    1.405879] pci 0000:00:1e.3: BAR 0: assigned [mem 0x4017006000-0x4017006fff 64bit]
+[    1.406219] pci 0000:00:1f.5: BAR 0: assigned [mem 0x50400000-0x50400fff]
+[    1.406238] pci 0000:01:00.0: BAR 7: assigned [mem 0x6c504000-0x6c523fff 64bit]
+[    1.406939] pci 0000:00:06.0: PCI bridge to [bus 01]
+[    1.406942] pci 0000:00:06.0:   bridge window [mem 0x6c500000-0x6c5fffff]
+[    1.406947] pci 0000:00:07.0: PCI bridge to [bus 02-2b]
+[    1.406948] pci 0000:00:07.0:   bridge window [io  0x4000-0x4fff]
+[    1.406951] pci 0000:00:07.0:   bridge window [mem 0x60000000-0x6c1fffff]
+[    1.406953] pci 0000:00:07.0:   bridge window [mem 0x6000000000-0x601bffffff 64bit pref]
+[    1.406957] pci 0000:00:07.1: PCI bridge to [bus 2c-55]
+[    1.406959] pci 0000:00:07.1:   bridge window [io  0x5000-0x5fff]
+[    1.406962] pci 0000:00:07.1:   bridge window [mem 0x52000000-0x5e1fffff]
+[    1.406964] pci 0000:00:07.1:   bridge window [mem 0x6020000000-0x603bffffff 64bit pref]
+[    1.406968] pci 0000:56:00.0: BAR 6: no space for [mem size 0x00100000 pref]
+[    1.406969] pci 0000:56:00.0: BAR 6: failed to assign [mem size 0x00100000 pref]
+[    1.406970] pci 0000:00:1d.0: PCI bridge to [bus 56]
+[    1.406982] pci 0000:00:1d.0:   bridge window [mem 0x6c300000-0x6c4fffff]
+[    1.406990] pci 0000:00:1d.1: PCI bridge to [bus 57]
+[    1.406994] pci 0000:00:1d.1:   bridge window [mem 0x6c200000-0x6c2fffff]
+[    1.407002] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    1.407004] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    1.407005] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    1.407006] pci_bus 0000:00: resource 7 [mem 0x50400000-0xbfffffff window]
+[    1.407006] pci_bus 0000:00: resource 8 [mem 0x4000000000-0x7fffffffff window]
+[    1.407007] pci_bus 0000:01: resource 1 [mem 0x6c500000-0x6c5fffff]
+[    1.407008] pci_bus 0000:02: resource 0 [io  0x4000-0x4fff]
+[    1.407009] pci_bus 0000:02: resource 1 [mem 0x60000000-0x6c1fffff]
+[    1.407010] pci_bus 0000:02: resource 2 [mem 0x6000000000-0x601bffffff 64bit pref]
+[    1.407011] pci_bus 0000:2c: resource 0 [io  0x5000-0x5fff]
+[    1.407012] pci_bus 0000:2c: resource 1 [mem 0x52000000-0x5e1fffff]
+[    1.407012] pci_bus 0000:2c: resource 2 [mem 0x6020000000-0x603bffffff 64bit pref]
+[    1.407013] pci_bus 0000:56: resource 1 [mem 0x6c300000-0x6c4fffff]
+[    1.407014] pci_bus 0000:57: resource 1 [mem 0x6c200000-0x6c2fffff]
+[    1.407181] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    1.407217] pci 0000:00:0d.0: enabling device (0000 -> 0002)
+[    1.408806] PCI: CLS 128 bytes, default 64
+[    1.408825] DMAR: No ATSR found
+[    1.408825] DMAR: No SATC found
+[    1.408827] DMAR: IOMMU feature fl1gp_support inconsistent
+[    1.408829] DMAR: IOMMU feature pgsel_inv inconsistent
+[    1.408830] DMAR: IOMMU feature nwfs inconsistent
+[    1.408831] DMAR: IOMMU feature dit inconsistent
+[    1.408831] DMAR: IOMMU feature sc_support inconsistent
+[    1.408832] DMAR: IOMMU feature dev_iotlb_support inconsistent
+[    1.408833] DMAR: dmar0: Using Queued invalidation
+[    1.408837] DMAR: dmar1: Using Queued invalidation
+[    1.408894] Trying to unpack rootfs image as initramfs...
+[    1.409013] pci 0000:00:00.0: Adding to iommu group 0
+[    1.409021] pci 0000:00:02.0: Adding to iommu group 1
+[    1.409027] pci 0000:00:04.0: Adding to iommu group 2
+[    1.409058] pci 0000:00:06.0: Adding to iommu group 3
+[    1.409064] pci 0000:00:07.0: Adding to iommu group 4
+[    1.409072] pci 0000:00:07.1: Adding to iommu group 5
+[    1.409079] pci 0000:00:08.0: Adding to iommu group 6
+[    1.409092] pci 0000:00:0d.0: Adding to iommu group 7
+[    1.409099] pci 0000:00:0d.2: Adding to iommu group 7
+[    1.409111] pci 0000:00:10.0: Adding to iommu group 8
+[    1.409118] pci 0000:00:10.6: Adding to iommu group 8
+[    1.409129] pci 0000:00:14.0: Adding to iommu group 9
+[    1.409136] pci 0000:00:14.2: Adding to iommu group 9
+[    1.409149] pci 0000:00:15.0: Adding to iommu group 10
+[    1.409156] pci 0000:00:15.1: Adding to iommu group 10
+[    1.409168] pci 0000:00:16.0: Adding to iommu group 11
+[    1.409175] pci 0000:00:16.3: Adding to iommu group 11
+[    1.409186] pci 0000:00:19.0: Adding to iommu group 12
+[    1.409195] pci 0000:00:19.1: Adding to iommu group 12
+[    1.409210] pci 0000:00:1d.0: Adding to iommu group 13
+[    1.409226] pci 0000:00:1d.1: Adding to iommu group 14
+[    1.409238] pci 0000:00:1e.0: Adding to iommu group 15
+[    1.409245] pci 0000:00:1e.3: Adding to iommu group 15
+[    1.409262] pci 0000:00:1f.0: Adding to iommu group 16
+[    1.409269] pci 0000:00:1f.3: Adding to iommu group 16
+[    1.409276] pci 0000:00:1f.4: Adding to iommu group 16
+[    1.409284] pci 0000:00:1f.5: Adding to iommu group 16
+[    1.409313] pci 0000:01:00.0: Adding to iommu group 17
+[    1.409332] pci 0000:56:00.0: Adding to iommu group 18
+[    1.409347] pci 0000:57:00.0: Adding to iommu group 19
+[    1.411617] DMAR: Intel(R) Virtualization Technology for Directed I/O
+[    1.411620] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    1.411620] software IO TLB: mapped [mem 0x0000000021000000-0x0000000025000000] (64MB)
+[    1.411636] ACPI: bus type thunderbolt registered
+[    1.453898] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x100d48ce7a0, max_idle_ns: 440795212195 ns
+[    1.473909] Freeing initrd memory: 103828K
+[    1.473942] clocksource: Switched to clocksource tsc
+[    1.473982] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[    1.475463] Initialise system trusted keyrings
+[    1.475476] Key type blacklist registered
+[    1.475549] workingset: timestamp_bits=36 max_order=22 bucket_order=0
+[    1.476570] zbud: loaded
+[    1.476881] integrity: Platform Keyring initialized
+[    1.485218] NET: Registered PF_ALG protocol family
+[    1.485220] Key type asymmetric registered
+[    1.485221] Asymmetric key parser 'x509' registered
+[    1.485242] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    1.485308] io scheduler mq-deadline registered
+[    1.485309] io scheduler kyber registered
+[    1.485330] io scheduler bfq registered
+[    1.485961] atomic64_test: passed for x86-64 platform with CX8 and with SSE
+[    1.486761] pcieport 0000:00:06.0: PME: Signaling with IRQ 138
+[    1.487088] pcieport 0000:00:07.0: PME: Signaling with IRQ 139
+[    1.487119] pcieport 0000:00:07.0: pciehp: Slot #1 AttnBtn- PwrCtrl- MRL- AttnInd- PwrInd- HotPlug+ Surprise+ Interlock- NoCompl+ IbPresDis- LLActRep+
+[    1.487467] pcieport 0000:00:07.1: PME: Signaling with IRQ 140
+[    1.487486] pcieport 0000:00:07.1: pciehp: Slot #2 AttnBtn- PwrCtrl- MRL- AttnInd- PwrInd- HotPlug+ Surprise+ Interlock- NoCompl+ IbPresDis- LLActRep+
+[    1.487785] pcieport 0000:00:1d.0: PME: Signaling with IRQ 141
+[    1.488072] pcieport 0000:00:1d.1: PME: Signaling with IRQ 142
+[    1.488197] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    1.488235] efifb: probing for efifb
+[    1.488255] efifb: framebuffer at 0x4000000000, using 8100k, total 8100k
+[    1.488257] efifb: mode is 1920x1080x32, linelength=7680, pages=1
+[    1.488259] efifb: scrolling: redraw
+[    1.488259] efifb: Truecolor: size=0:8:8:8, shift=0:16:8:0
+[    1.488362] Console: switching to colour frame buffer device 240x67
+[    1.492753] fb0: EFI VGA frame buffer device
+[    1.492996] Monitor-Mwait will be used to enter C-1 state
+[    1.493021] Monitor-Mwait will be used to enter C-2 state
+[    1.493026] Monitor-Mwait will be used to enter C-3 state
+[    1.493030] ACPI: \_SB_.PR00: Found 3 idle states
+[    1.493593] ACPI: AC: AC Adapter [ADP1] (on-line)
+[    1.493649] input: Lid Switch as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:1c/PNP0C09:00/PNP0C0D:00/input/input0
+[    1.493687] ACPI: button: Lid Switch [LID0]
+[    1.493731] input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input1
+[    1.493766] ACPI: button: Power Button [PWRB]
+[    1.493790] input: Sleep Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0E:00/input/input2
+[    1.493805] ACPI: button: Sleep Button [SLPB]
+[    1.494200] smpboot: Estimated ratio of average max frequency by base frequency (times 1024): 3723
+[    1.526609] thermal LNXTHERM:00: registered as thermal_zone0
+[    1.526613] ACPI: thermal: Thermal Zone [TZ00] (52 C)
+[    1.527057] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    1.527139] ACPI: battery: Slot [BAT0] (battery present)
+[    1.527251] ACPI: battery: Slot [BAT1] (battery absent)
+[    1.527260] serial8250: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    1.527314] ACPI: battery: Slot [BAT2] (battery absent)
+[    1.527702] serial 0000:00:16.3: enabling device (0000 -> 0003)
+[    1.528005] 0000:00:16.3: ttyS1 at I/O 0x3060 (irq = 19, base_baud = 115200) is a 16550A
+[    1.528230] Non-volatile memory driver v1.3
+[    1.536843] rdac: device handler registered
+[    1.536993] hp_sw: device handler registered
+[    1.536995] emc: device handler registered
+[    1.537073] alua: device handler registered
+[    1.537181] libphy: Fixed MDIO Bus: probed
+[    1.537217] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.537220] ehci-pci: EHCI PCI platform driver
+[    1.537230] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.537232] ohci-pci: OHCI PCI platform driver
+[    1.537239] uhci_hcd: USB Universal Host Controller Interface driver
+[    1.537316] xhci_hcd 0000:00:0d.0: xHCI Host Controller
+[    1.537342] xhci_hcd 0000:00:0d.0: new USB bus registered, assigned bus number 1
+[    1.538483] xhci_hcd 0000:00:0d.0: hcc params 0x20007fc1 hci version 0x120 quirks 0x0000000200009810
+[    1.538652] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.14
+[    1.538655] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.538657] usb usb1: Product: xHCI Host Controller
+[    1.538658] usb usb1: Manufacturer: Linux 5.14.0-83.el9.x86_64 xhci-hcd
+[    1.538660] usb usb1: SerialNumber: 0000:00:0d.0
+[    1.538815] hub 1-0:1.0: USB hub found
+[    1.538826] hub 1-0:1.0: 1 port detected
+[    1.538974] xhci_hcd 0000:00:0d.0: xHCI Host Controller
+[    1.539018] xhci_hcd 0000:00:0d.0: new USB bus registered, assigned bus number 2
+[    1.539022] xhci_hcd 0000:00:0d.0: Host supports USB 3.2 Enhanced SuperSpeed
+[    1.539062] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.14
+[    1.539064] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.539066] usb usb2: Product: xHCI Host Controller
+[    1.539067] usb usb2: Manufacturer: Linux 5.14.0-83.el9.x86_64 xhci-hcd
+[    1.539068] usb usb2: SerialNumber: 0000:00:0d.0
+[    1.539221] hub 2-0:1.0: USB hub found
+[    1.539232] hub 2-0:1.0: 2 ports detected
+[    1.540125] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[    1.540173] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 3
+[    1.541440] xhci_hcd 0000:00:14.0: hcc params 0x20007fc1 hci version 0x120 quirks 0x0000000000009810
+[    1.541825] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.14
+[    1.541828] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.541830] usb usb3: Product: xHCI Host Controller
+[    1.541831] usb usb3: Manufacturer: Linux 5.14.0-83.el9.x86_64 xhci-hcd
+[    1.541832] usb usb3: SerialNumber: 0000:00:14.0
+[    1.541958] hub 3-0:1.0: USB hub found
+[    1.541987] hub 3-0:1.0: 12 ports detected
+[    1.543214] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[    1.543256] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 4
+[    1.543259] xhci_hcd 0000:00:14.0: Host supports USB 3.1 Enhanced SuperSpeed
+[    1.543316] usb usb4: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.14
+[    1.543318] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.543320] usb usb4: Product: xHCI Host Controller
+[    1.543321] usb usb4: Manufacturer: Linux 5.14.0-83.el9.x86_64 xhci-hcd
+[    1.543322] usb usb4: SerialNumber: 0000:00:14.0
+[    1.543408] hub 4-0:1.0: USB hub found
+[    1.543430] hub 4-0:1.0: 4 ports detected
+[    1.543860] usb: port power management may be unreliable
+[    1.543976] usbcore: registered new interface driver usbserial_generic
+[    1.543981] usbserial: USB Serial support registered for generic
+[    1.570904] i8042: PNP: No PS/2 controller found.
+[    1.571044] mousedev: PS/2 mouse device common for all mice
+[    1.571239] rtc_cmos rtc_cmos: RTC can wake from S4
+[    1.572811] rtc_cmos rtc_cmos: registered as rtc0
+[    1.573206] rtc_cmos rtc_cmos: setting system clock to 2022-05-18T13:17:52 UTC (1652879872)
+[    1.573221] rtc_cmos rtc_cmos: alarms up to one month, y3k, 114 bytes nvram
+[    1.573871] intel_pstate: Intel P-state driver initializing
+[    1.577857] intel_pstate: HWP enabled
+[    1.578050] hid: raw HID events driver (C) Jiri Kosina
+[    1.578078] usbcore: registered new interface driver usbhid
+[    1.578079] usbhid: USB HID core driver
+[    1.578121] drop_monitor: Initializing network drop monitor service
+[    1.578172] Initializing XFRM netlink socket
+[    1.578227] NET: Registered PF_INET6 protocol family
+[    1.578550] Segment Routing with IPv6
+[    1.578577] NET: Registered PF_PACKET protocol family
+[    1.578605] mpls_gso: MPLS GSO support
+[    1.579872] microcode: sig=0x906a4, pf=0x80, revision=0x40c
+[    1.580454] microcode: Microcode Update Driver: v2.2.
+[    1.581054] resctrl: L2 allocation detected
+[    1.581054] resctrl: L2DATA allocation detected
+[    1.581055] resctrl: L2CODE allocation detected
+[    1.581068] IPI shorthand broadcast: enabled
+[    1.581093] AVX2 version of gcm_enc/dec engaged.
+[    1.582317] AES CTR mode by8 optimization enabled
+[    1.582578] sched_clock: Marking stable (1570611404, 11960181)->(1594507304, -11935719)
+[    1.583280] registered taskstats version 1
+[    1.584164] Loading compiled-in X.509 certificates
+[    1.599122] Loaded X.509 cert 'Red Hat Enterprise Linux kernel signing key: cf2f159f15b8729a926fd5186e88f15ec5b75df2'
+[    1.614142] Loaded X.509 cert 'Red Hat Enterprise Linux Driver Update Program (key 3): bf57f3e87362bc7229d9f465321773dfd1f77a80'
+[    1.614462] Loaded X.509 cert 'Red Hat Enterprise Linux kpatch signing key: 4d38fd864ebe18c5f0b72e3852e2014c3a676fc8'
+[    1.614681] zswap: loaded using pool lzo/zbud
+[    1.617049] page_owner is disabled
+[    1.617069] Key type big_key registered
+[    1.620851] Key type trusted registered
+[    1.623469] Key type encrypted registered
+[    1.623482] ima: secureboot mode unknown, no efi
+[    1.623492] Loading compiled-in module X.509 certificates
+[    1.623759] Loaded X.509 cert 'Red Hat Enterprise Linux kernel signing key: cf2f159f15b8729a926fd5186e88f15ec5b75df2'
+[    1.623761] ima: Allocated hash algorithm: sha256
+[    1.666746] ima: No architecture policies found
+[    1.666755] evm: Initialising EVM extended attributes:
+[    1.666755] evm: security.selinux
+[    1.666756] evm: security.SMACK64 (disabled)
+[    1.666756] evm: security.SMACK64EXEC (disabled)
+[    1.666757] evm: security.SMACK64TRANSMUTE (disabled)
+[    1.666757] evm: security.SMACK64MMAP (disabled)
+[    1.666757] evm: security.apparmor (disabled)
+[    1.666758] evm: security.ima
+[    1.666758] evm: security.capability
+[    1.666759] evm: HMAC attrs: 0x1
+[    1.741066] usb 4-2: new SuperSpeed USB device number 2 using xhci_hcd
+[    1.748253] Freeing unused decrypted memory: 2036K
+[    1.748808] Freeing unused kernel image (initmem) memory: 2552K
+[    1.752684] Write protecting the kernel read-only data: 26624k
+[    1.753494] Freeing unused kernel image (text/rodata gap) memory: 2036K
+[    1.753864] Freeing unused kernel image (rodata/data gap) memory: 1180K
+[    1.758256] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    1.758263] Run /init as init process
+[    1.758264]   with arguments:
+[    1.758265]     /init
+[    1.758266]     rhgb
+[    1.758267]   with environment:
+[    1.758267]     HOME=/
+[    1.758267]     TERM=linux
+[    1.758267]     intel_iommu=on
+[    1.762835] systemd[1]: systemd 250-6.el9_0 running in system mode (+PAM +AUDIT +SELINUX -APPARMOR +IMA +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS -FIDO2 +IDN2 -IDN -IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT -QRENCODE +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK +XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[    1.763857] usb 4-2: New USB device found, idVendor=0bda, idProduct=0411, bcdDevice= 1.04
+[    1.763860] usb 4-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    1.763862] usb 4-2: Product: 4-Port USB 3.0 Hub
+[    1.763863] usb 4-2: Manufacturer: Generic
+[    1.769217] hub 4-2:1.0: USB hub found
+[    1.770081] hub 4-2:1.0: 4 ports detected
+[    1.775749] systemd[1]: Detected architecture x86-64.
+[    1.775753] systemd[1]: Running in initial RAM disk.
+[    1.775780] systemd[1]: No hostname configured, using default hostname.
+[    1.775869] systemd[1]: Hostname set to <localhost>.
+[    1.812561] systemd[1]: Queued start job for default target Initrd Default Target.
+[    1.813914] systemd[1]: Created slice Slice /system/systemd-hibernate-resume.
+[    1.813953] systemd[1]: Reached target Initrd /usr File System.
+[    1.813961] systemd[1]: Reached target Slice Units.
+[    1.813967] systemd[1]: Reached target Swaps.
+[    1.813971] systemd[1]: Reached target Timer Units.
+[    1.814008] systemd[1]: Listening on D-Bus System Message Bus Socket.
+[    1.814037] systemd[1]: Listening on Journal Socket (/dev/log).
+[    1.814062] systemd[1]: Listening on Journal Socket.
+[    1.814095] systemd[1]: Listening on udev Control Socket.
+[    1.814120] systemd[1]: Listening on udev Kernel Socket.
+[    1.814124] systemd[1]: Reached target Socket Units.
+[    1.814455] systemd[1]: Starting Create List of Static Device Nodes...
+[    1.817019] systemd[1]: Starting Journal Service...
+[    1.817837] systemd[1]: Starting Load Kernel Modules...
+[    1.817915] systemd[1]: Create System Users was skipped because of a failed condition check (ConditionNeedsUpdate=/etc).
+[    1.818498] systemd[1]: Starting Setup Virtual Console...
+[    1.819151] systemd[1]: Finished Create List of Static Device Nodes.
+[    1.819922] systemd[1]: Starting Create Static Device Nodes in /dev...
+[    1.823032] systemd[1]: Finished Create Static Device Nodes in /dev.
+[    1.834013] fuse: init (API version 7.34)
+[    1.837990] IPMI message handler: version 39.2
+[    1.839095] ipmi device interface
+[    1.839751] systemd[1]: Finished Load Kernel Modules.
+[    1.840240] systemd[1]: Starting Apply Kernel Variables...
+[    1.842751] systemd[1]: Started Journal Service.
+[    1.880650] usb 3-3: new full-speed USB device number 2 using xhci_hcd
+[    1.969882] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[    1.969908] device-mapper: uevent: version 1.0.3
+[    1.969978] device-mapper: ioctl: 4.45.0-ioctl (2021-03-22) initialised: dm-devel@redhat.com
+[    2.010116] usb 3-3: New USB device found, idVendor=8087, idProduct=0032, bcdDevice= 0.00
+[    2.010122] usb 3-3: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    2.112430] acpi PNP0C14:01: duplicate WMI GUID 05901221-D566-11D1-B2F0-00A0C9062910 (first instance was on PNP0C14:00)
+[    2.125088] Intel(R) 2.5G Ethernet Linux Driver
+[    2.125094] Copyright(c) 2018 Intel Corporation.
+[    2.125419] igc 0000:56:00.0: PCIe PTM not supported by PCIe bus/controller
+[    2.126693] usb 3-6: new high-speed USB device number 3 using xhci_hcd
+[    2.131906] nvme 0000:01:00.0: platform quirk: setting simple suspend
+[    2.132606] nvme nvme0: pci function 0000:01:00.0
+[    2.150345] nvme nvme0: 8/0/0 default/read/poll queues
+[    2.152420]  nvme0n1: p1 p2 p3
+[    2.176128] pps pps0: new PPS source ptp0
+[    2.176198] igc 0000:56:00.0 (unnamed net_device) (uninitialized): PHC added
+[    2.237294] igc 0000:56:00.0: 4.000 Gb/s available PCIe bandwidth (5.0 GT/s PCIe x1 link)
+[    2.237305] igc 0000:56:00.0 eth0: MAC: 24:5e:be:57:f0:c3
+[    2.245889] igc 0000:56:00.0 enp86s0: renamed from eth0
+[    2.260198] usb 3-6: New USB device found, idVendor=0bda, idProduct=5411, bcdDevice= 1.04
+[    2.260207] usb 3-6: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    2.260210] usb 3-6: Product: 4-Port USB 2.0 Hub
+[    2.260212] usb 3-6: Manufacturer: Generic
+[    2.261120] hub 3-6:1.0: USB hub found
+[    2.261673] hub 3-6:1.0: 4 ports detected
+[    2.476215] i915 0000:00:02.0: Your graphics device 46aa is not properly supported by the driver in this
+               kernel version. To force driver probe anyway, use i915.force_probe=46aa
+               module parameter or CONFIG_DRM_I915_FORCE_PROBE=46aa configuration option,
+               or (recommended) check for kernel updates.
+[    2.546794] usb 3-6.1: new low-speed USB device number 4 using xhci_hcd
+[    2.641113] usb 3-6.1: New USB device found, idVendor=093a, idProduct=2510, bcdDevice= 1.00
+[    2.641122] usb 3-6.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    2.641125] usb 3-6.1: Product: USB Optical Mouse
+[    2.641127] usb 3-6.1: Manufacturer: PixA琀
+[    2.647186] input: PixA琀 USB Optical Mouse as /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6.1/3-6.1:1.0/0003:093A:2510.0001/input/input3
+[    2.647420] hid-generic 0003:093A:2510.0001: input,hidraw0: USB HID v1.11 Mouse [PixA琀 USB Optical Mouse] on usb-0000:00:14.0-6.1/input0
+[    2.723764] usb 3-6.2: new low-speed USB device number 5 using xhci_hcd
+[    2.820533] usb 3-6.2: New USB device found, idVendor=046d, idProduct=c31d, bcdDevice=66.01
+[    2.820553] usb 3-6.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    2.820555] usb 3-6.2: Product: USB Keyboard
+[    2.820557] usb 3-6.2: Manufacturer: Logitech
+[    2.832794] input: Logitech USB Keyboard as /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6.2/3-6.2:1.0/0003:046D:C31D.0002/input/input4
+[    2.851574] PM: Image not found (code -22)
+[    2.885165] hid-generic 0003:046D:C31D.0002: input,hidraw1: USB HID v1.10 Keyboard [Logitech USB Keyboard] on usb-0000:00:14.0-6.2/input0
+[    2.892519] input: Logitech USB Keyboard Consumer Control as /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6.2/3-6.2:1.1/0003:046D:C31D.0003/input/input5
+[    2.943985] input: Logitech USB Keyboard System Control as /devices/pci0000:00/0000:00:14.0/usb3/3-6/3-6.2/3-6.2:1.1/0003:046D:C31D.0003/input/input6
+[    2.944201] hid-generic 0003:046D:C31D.0003: input,hidraw2: USB HID v1.10 Device [Logitech USB Keyboard] on usb-0000:00:14.0-6.2/input1
+[    3.244338] SGI XFS with ACLs, security attributes, scrub, quota, no debug enabled
+[    3.251564] XFS (dm-0): Mounting V5 Filesystem
+[    3.269558] XFS (dm-0): Ending clean mount
+[    3.531169] systemd-journald[314]: Received SIGTERM from PID 1 (systemd).
+[    3.569099] audit: type=1404 audit(1652879874.494:2): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295 enabled=1 old-enabled=1 lsm=selinux res=1
+[    3.613767] SELinux:  policy capability network_peer_controls=1
+[    3.613773] SELinux:  policy capability open_perms=1
+[    3.613774] SELinux:  policy capability extended_socket_class=1
+[    3.613775] SELinux:  policy capability always_check_network=0
+[    3.613775] SELinux:  policy capability cgroup_seclabel=1
+[    3.613775] SELinux:  policy capability nnp_nosuid_transition=1
+[    3.613776] SELinux:  policy capability genfs_seclabel_symlinks=0
+[    3.652085] audit: type=1403 audit(1652879874.577:3): auid=4294967295 ses=4294967295 lsm=selinux res=1
+[    3.654005] systemd[1]: Successfully loaded SELinux policy in 85.269ms.
+[    3.682844] systemd[1]: Relabelled /dev, /dev/shm, /run, /sys/fs/cgroup in 21.364ms.
+[    3.685476] systemd[1]: systemd 250-6.el9_0 running in system mode (+PAM +AUDIT +SELINUX -APPARMOR +IMA +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS -FIDO2 +IDN2 -IDN -IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT -QRENCODE +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK +XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[    3.697958] systemd[1]: Detected architecture x86-64.
+[    3.714370] systemd-rc-local-generator[696]: /etc/rc.d/rc.local is not marked executable, skipping.
+[    3.829636] systemd[1]: initrd-switch-root.service: Deactivated successfully.
+[    3.829757] systemd[1]: Stopped Switch Root.
+[    3.830211] systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 1.
+[    3.830614] systemd[1]: Created slice Slice /system/getty.
+[    3.831001] systemd[1]: Created slice Slice /system/modprobe.
+[    3.831318] systemd[1]: Created slice Slice /system/sshd-keygen.
+[    3.831617] systemd[1]: Created slice Slice /system/systemd-fsck.
+[    3.831919] systemd[1]: Created slice User and Session Slice.
+[    3.831963] systemd[1]: Dispatch Password Requests to Console Directory Watch was skipped because of a failed condition check (ConditionPathExists=!/run/plymouth/pid).
+[    3.832116] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    3.832593] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    3.832671] systemd[1]: Reached target Local Encrypted Volumes.
+[    3.832703] systemd[1]: Reached target Login Prompts.
+[    3.832729] systemd[1]: Stopped target Switch Root.
+[    3.832761] systemd[1]: Stopped target Initrd File Systems.
+[    3.832783] systemd[1]: Stopped target Initrd Root File System.
+[    3.832804] systemd[1]: Reached target Local Integrity Protected Volumes.
+[    3.832845] systemd[1]: Reached target Slice Units.
+[    3.832880] systemd[1]: Reached target Local Verity Protected Volumes.
+[    3.833336] systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[    3.834985] systemd[1]: Listening on LVM2 poll daemon socket.
+[    3.835131] systemd[1]: multipathd control socket was skipped because of a failed condition check (ConditionPathExists=/etc/multipath.conf).
+[    3.836483] systemd[1]: Listening on Process Core Dump Socket.
+[    3.836776] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    3.837703] systemd[1]: Listening on udev Control Socket.
+[    3.838086] systemd[1]: Listening on udev Kernel Socket.
+[    3.839209] systemd[1]: Activating swap /dev/mapper/rhel-swap...
+[    3.840607] systemd[1]: Mounting Huge Pages File System...
+[    3.842506] systemd[1]: Mounting POSIX Message Queue File System...
+[    3.843872] systemd[1]: Mounting Kernel Debug File System...
+[    3.845159] systemd[1]: Mounting Kernel Trace File System...
+[    3.847002] systemd[1]: Starting Create List of Static Device Nodes...
+[    3.849620] Adding 7884796k swap on /dev/mapper/rhel-swap.  Priority:-2 extents:1 across:7884796k SSFS
+[    3.850195] systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[    3.851838] systemd[1]: Starting Load Kernel Module configfs...
+[    3.853235] systemd[1]: Starting Load Kernel Module drm...
+[    3.854517] systemd[1]: Starting Load Kernel Module fuse...
+[    3.857161] systemd[1]: Starting Read and set NIS domainname from /etc/sysconfig/network...
+[    3.857360] systemd[1]: plymouth-switch-root.service: Deactivated successfully.
+[    3.857541] systemd[1]: Stopped Plymouth switch root service.
+[    3.857903] systemd[1]: systemd-fsck-root.service: Deactivated successfully.
+[    3.857953] systemd[1]: Stopped File System Check on Root Device.
+[    3.858049] systemd[1]: Stopped Journal Service.
+[    3.862321] systemd[1]: Starting Journal Service...
+[    3.865054] systemd[1]: Starting Load Kernel Modules...
+[    3.867005] systemd[1]: Starting Generate network units from Kernel command line...
+[    3.869085] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    3.869347] systemd[1]: Repartition Root Disk was skipped because all trigger condition checks failed.
+[    3.871653] systemd[1]: Starting Coldplug All udev Devices...
+[    3.879319] systemd[1]: Activated swap /dev/mapper/rhel-swap.
+[    3.883288] systemd[1]: Mounted Huge Pages File System.
+[    3.883755] systemd[1]: Mounted POSIX Message Queue File System.
+[    3.884090] systemd[1]: Mounted Kernel Debug File System.
+[    3.884405] systemd[1]: Mounted Kernel Trace File System.
+[    3.884890] systemd[1]: Started Journal Service.
+[    3.911577] systemd-journald[718]: Received client request to flush runtime journal.
+[    4.611781] intel_pmc_core INT33A1:00:  initialized
+[    4.649264] input: Intel HID events as /devices/platform/INTC1070:00/input/input7
+[    4.649501] intel-hid INTC1070:00: platform supports 5 button array
+[    4.649538] input: Intel HID 5 button array as /devices/platform/INTC1070:00/input/input8
+[    4.820569] resource sanity check: requesting [mem 0xfedc0000-0xfedcffff], which spans more than pnp 00:03 [mem 0xfedc0000-0xfedc7fff]
+[    4.820583] caller igen6_probe+0x163/0x530 [igen6_edac] mapping multiple BARs
+[    4.820768] EDAC MC0: Giving out device to module igen6_edac controller Intel_client_SoC MC#0: DEV 0000:00:00.0 (INTERRUPT)
+[    4.820825] EDAC MC1: Giving out device to module igen6_edac controller Intel_client_SoC MC#1: DEV 0000:00:00.0 (INTERRUPT)
+[    4.820850] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[    4.820853] EDAC igen6 MC1: ADDR 0x433bd0040 
+[    4.820857] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x433bd0 offset:0x40 grain:64 syndrome:0x1)
+[    4.820862] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    4.820863] EDAC igen6 MC0: ADDR 0x433560040 
+[    4.820866] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x433560 offset:0x40 grain:64 syndrome:0x1)
+[    4.820945] EDAC igen6: v2.5
+[    4.821004] mce: [Hardware Error]: Machine check events logged
+[    4.821027] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[    4.821029] EDAC igen6 MC1: ADDR 0x480380040 
+[    4.821060] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x480380 offset:0x40 grain:64 syndrome:0x1)
+[    4.821089] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    4.821091] EDAC igen6 MC0: ADDR 0x2fcc40040 
+[    4.821094] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fcc40 offset:0x40 grain:64 syndrome:0x1)
+[    4.821108] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[    4.821110] EDAC igen6 MC1: ADDR 0x2ff9c0040 
+[    4.821112] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2ff9c0 offset:0x40 grain:64 syndrome:0x1)
+[    4.821113] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    4.821114] EDAC igen6 MC0: ADDR 0x2fcd40040 
+[    4.821117] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd40 offset:0x40 grain:64 syndrome:0x1)
+[    4.821161] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[    4.821162] EDAC igen6 MC1: ADDR 0x150ae0040 
+[    4.821165] EDAC MC1: 1 CE on MC#1_Chan#1_DIMM#1 (channel:1 slot:1 page:0x150ae0 offset:0x40 grain:64 syndrome:0x1)
+[    4.821167] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    4.821168] EDAC igen6 MC0: ADDR 0x103b70040 
+[    4.821170] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x103b70 offset:0x40 grain:64 syndrome:0x1)
+[    4.821383] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    4.821386] EDAC igen6 MC0: ADDR 0x150a60040 
+[    4.821388] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x150a60 offset:0x40 grain:64 syndrome:0x1)
+[    4.821428] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    4.821430] EDAC igen6 MC0: ADDR 0x150a40040 
+[    4.821433] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x150a40 offset:0x40 grain:64 syndrome:0x1)
+[    4.821491] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    4.821493] EDAC igen6 MC0: ADDR 0x150a20040 
+[    4.821495] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x150a20 offset:0x40 grain:64 syndrome:0x1)
+[    4.821502] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    4.821504] EDAC igen6 MC0: ADDR 0x150a10040 
+[    4.821506] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x150a10 offset:0x40 grain:64 syndrome:0x1)
+[    4.821540] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[    4.821542] EDAC igen6 MC1: ADDR 0x1509f0040 
+[    4.821544] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x1509f0 offset:0x40 grain:64 syndrome:0x1)
+[    4.821597] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[    4.821599] EDAC igen6 MC1: ADDR 0x150990040 
+[    4.821601] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x150990 offset:0x40 grain:64 syndrome:0x1)
+[    4.821675] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[    4.821677] EDAC igen6 MC1: ADDR 0x140e90040 
+[    4.821701] EDAC MC1: 1 CE on MC#1_Chan#1_DIMM#1 (channel:1 slot:1 page:0x140e90 offset:0x40 grain:64 syndrome:0x1)
+[    4.821703] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    4.821704] EDAC igen6 MC0: ADDR 0x150970040 
+[    4.821706] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x150970 offset:0x40 grain:64 syndrome:0x1)
+[    4.821714] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    4.821715] EDAC igen6 MC0: ADDR 0x10c260040 
+[    4.821717] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x10c260 offset:0x40 grain:64 syndrome:0x1)
+[    4.821779] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[    4.821781] EDAC igen6 MC1: ADDR 0x10c3b0040 
+[    4.821783] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x10c3b0 offset:0x40 grain:64 syndrome:0x1)
+[    4.821784] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    4.821785] EDAC igen6 MC0: ADDR 0x2fe600040 
+[    4.821787] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fe600 offset:0x40 grain:64 syndrome:0x1)
+[    4.821812] mce: CMCI storm detected: switching to poll mode
+[    4.856485] proc_thermal_pci 0000:00:04.0: enabling device (0000 -> 0002)
+[    4.858051] intel_rapl_common: Found RAPL domain package
+[    4.912990] Bluetooth: Core ver 2.22
+[    4.913040] NET: Registered PF_BLUETOOTH protocol family
+[    4.913042] Bluetooth: HCI device and connection manager initialized
+[    4.913048] Bluetooth: HCI socket layer initialized
+[    4.913051] Bluetooth: L2CAP socket layer initialized
+[    4.913058] Bluetooth: SCO socket layer initialized
+[    4.944829] intel-lpss 0000:00:15.0: enabling device (0000 -> 0002)
+[    4.945606] usbcore: registered new interface driver btusb
+[    4.946118] idma64 idma64.0: Found Intel integrated DMA 64-bit
+[    4.949351] Bluetooth: hci0: Firmware timestamp 2021.51 buildtype 1 build 36030
+[    4.952327] mei_me 0000:00:16.0: enabling device (0000 -> 0002)
+[    4.958725] intel-lpss 0000:00:15.1: enabling device (0000 -> 0002)
+[    4.960002] idma64 idma64.1: Found Intel integrated DMA 64-bit
+[    4.968862] i801_smbus 0000:00:1f.4: enabling device (0000 -> 0003)
+[    4.969280] i801_smbus 0000:00:1f.4: SPD Write Disable is set
+[    4.969395] i801_smbus 0000:00:1f.4: SMBus using PCI interrupt
+[    4.972682] intel-lpss 0000:00:19.0: enabling device (0000 -> 0002)
+[    4.973598] idma64 idma64.2: Found Intel integrated DMA 64-bit
+[    4.981414] i2c i2c-0: 8/8 memory slots populated (from DMI)
+[    4.981421] i2c i2c-0: Systems with more than 4 memory slots not supported yet, not instantiating SPD
+[    4.985701] intel-lpss 0000:00:19.1: enabling device (0000 -> 0002)
+[    4.986763] idma64 idma64.3: Found Intel integrated DMA 64-bit
+[    4.998940] intel-lpss 0000:00:1e.0: enabling device (0000 -> 0002)
+[    5.000214] idma64 idma64.4: Found Intel integrated DMA 64-bit
+[    5.000864] dw-apb-uart.4: ttyS2 at MMIO 0x4017005000 (irq = 16, base_baud = 6250000) is a 16550A
+[    5.000913] Bluetooth: hci0: Found device firmware: intel/ibt-0041-0041.sfi
+[    5.001015] Bluetooth: hci0: Boot Address: 0x100800
+[    5.001017] Bluetooth: hci0: Firmware Version: 190-51.21
+[    5.001019] Bluetooth: hci0: Firmware already loaded
+[    5.012833] intel-lpss 0000:00:1e.3: enabling device (0000 -> 0002)
+[    5.014038] idma64 idma64.5: Found Intel integrated DMA 64-bit
+[    5.018030] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    5.018743] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    5.051728] Intel(R) Wireless WiFi driver for Linux
+[    5.052133] iwlwifi 0000:57:00.0: enabling device (0000 -> 0002)
+[    5.087962] snd_hda_intel 0000:00:1f.3: DSP detected with PCI class/subclass/prog-if info 0x040100
+[    5.088012] snd_hda_intel 0000:00:1f.3: SoundWire enabled on CannonLake+ platform, using SOF driver
+[    5.136886] iwlwifi 0000:57:00.0: api flags index 2 larger than supported by driver
+[    5.136925] iwlwifi 0000:57:00.0: TLV_FW_FSEQ_VERSION: FSEQ Version: 0.0.2.34
+[    5.137755] iwlwifi 0000:57:00.0: loaded firmware version 67.8f59b80b.0 ty-a0-gf-a0-67.ucode op_mode iwlmvm
+[    5.182828] sof-audio-pci-intel-tgl 0000:00:1f.3: DSP detected with PCI class/subclass/prog-if info 0x040100
+[    5.182876] sof-audio-pci-intel-tgl 0000:00:1f.3: SoundWire enabled on CannonLake+ platform, using SOF driver
+[    5.182909] sof-audio-pci-intel-tgl 0000:00:1f.3: enabling device (0000 -> 0002)
+[    5.183388] sof-audio-pci-intel-tgl 0000:00:1f.3: DSP detected with PCI class/subclass/prog-if 0x040100
+[    5.266807] iwlwifi 0000:57:00.0: Detected Intel(R) Wi-Fi 6 AX210 160MHz, REV=0x420
+[    5.273457] thermal thermal_zone4: failed to read out thermal zone (-61)
+[    5.273470] iwlwifi 0000:57:00.0: WRT: Failed to set DRAM buffer for alloc id 1, ret=-1
+[    5.273473] iwlwifi 0000:57:00.0: WRT: Failed to set DRAM buffer for alloc id 2, ret=-1
+[    5.273474] iwlwifi 0000:57:00.0: WRT: Failed to set DRAM buffer for alloc id 3, ret=-1
+[    5.431233] iwlwifi 0000:57:00.0: loaded PNVM version dda57f4f
+[    5.442705] iwlwifi 0000:57:00.0: Detected RF GF, rfid=0x10d000
+[    5.512355] iwlwifi 0000:57:00.0: base HW address: e8:84:a5:2c:1e:bf
+[    5.821759] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[    5.821764] EDAC igen6 MC1: ADDR 0x140e80040 
+[    5.821771] EDAC MC1: 1 CE on MC#1_Chan#1_DIMM#1 (channel:1 slot:1 page:0x140e80 offset:0x40 grain:64 syndrome:0x1)
+[    5.821774] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    5.821775] EDAC igen6 MC0: ADDR 0x150b00040 
+[    5.821778] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x150b00 offset:0x40 grain:64 syndrome:0x1)
+[    5.831917] input: PC Speaker as /devices/platform/pcspkr/input/input9
+[    5.844626] perf uncore: Cannot find matched IMC device.
+[    5.844695] perf uncore: Cannot find matched IMC device.
+[    5.856784] RAPL PMU: API unit is 2^-32 Joules, 4 fixed counters, 655360 ms ovfl timer
+[    5.856788] RAPL PMU: hw unit of domain pp0-core 2^-14 Joules
+[    5.856789] RAPL PMU: hw unit of domain package 2^-14 Joules
+[    5.856790] RAPL PMU: hw unit of domain pp1-gpu 2^-14 Joules
+[    5.856790] RAPL PMU: hw unit of domain psys 2^-14 Joules
+[    6.194733] intel_rapl_common: Found RAPL domain package
+[    6.194740] intel_rapl_common: Found RAPL domain core
+[    6.194741] intel_rapl_common: Found RAPL domain uncore
+[    6.194744] intel_rapl_common: Found RAPL domain psys
+[    6.195011] ppdev: user-space parallel port driver
+[    6.220619] iTCO_vendor_support: vendor-support=0
+[    6.223805] iTCO_wdt iTCO_wdt: Found a Intel PCH TCO device (Version=6, TCOBASE=0x0400)
+[    6.224282] iTCO_wdt iTCO_wdt: initialized. heartbeat=30 sec (nowayout=0)
+[    6.256088] iwlwifi 0000:57:00.0 wlp87s0: renamed from wlan0
+[    6.845894] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[    6.845900] EDAC igen6 MC1: ADDR 0x48fbc0040 
+[    6.845910] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x48fbc0 offset:0x40 grain:64 syndrome:0x1)
+[    6.845914] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    6.845915] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[    6.845920] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[    6.853546] XFS (nvme0n1p2): Mounting V5 Filesystem
+[    6.853545] XFS (dm-2): Mounting V5 Filesystem
+[    6.863843] XFS (dm-2): Ending clean mount
+[    6.872626] XFS (nvme0n1p2): Ending clean mount
+[    7.144690] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    7.144699] Bluetooth: BNEP filters: protocol multicast
+[    7.144708] Bluetooth: BNEP socket layer initialized
+[    7.239559] NET: Registered PF_QIPCRTR protocol family
+[    7.805848] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[    7.805855] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[    7.805864] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[    7.805868] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    7.805870] EDAC igen6 MC0: ADDR 0x130210060 
+[    7.805873] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x130210 offset:0x60 grain:64 syndrome:0x1)
+[    8.829800] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[    8.829804] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[    8.829808] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[    8.829810] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    8.829811] EDAC igen6 MC0: ADDR 0x480200040 
+[    8.829813] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x480200 offset:0x40 grain:64 syndrome:0x1)
+[    9.651590] igc 0000:56:00.0 enp86s0: NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX
+[    9.654150] iwlwifi 0000:57:00.0: WRT: Failed to set DRAM buffer for alloc id 1, ret=-1
+[    9.654152] iwlwifi 0000:57:00.0: WRT: Failed to set DRAM buffer for alloc id 2, ret=-1
+[    9.654152] iwlwifi 0000:57:00.0: WRT: Failed to set DRAM buffer for alloc id 3, ret=-1
+[    9.853771] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[    9.853776] EDAC igen6 MC1: ADDR 0x103bd0040 
+[    9.853781] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x103bd0 offset:0x40 grain:64 syndrome:0x1)
+[    9.853784] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[    9.853785] EDAC igen6 MC0: ADDR 0x102810060 
+[    9.853788] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x102810 offset:0x60 grain:64 syndrome:0x1)
+[    9.901361] IPv6: ADDRCONF(NETDEV_CHANGE): enp86s0: link becomes ready
+[    9.925728] iwlwifi 0000:57:00.0: WRT: Failed to set DRAM buffer for alloc id 1, ret=-1
+[    9.925731] iwlwifi 0000:57:00.0: WRT: Failed to set DRAM buffer for alloc id 2, ret=-1
+[    9.925731] iwlwifi 0000:57:00.0: WRT: Failed to set DRAM buffer for alloc id 3, ret=-1
+[   10.814411] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   10.814415] EDAC igen6 MC1: ADDR 0x100fc0040 
+[   10.814419] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100fc0 offset:0x40 grain:64 syndrome:0x1)
+[   10.814420] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   10.814421] EDAC igen6 MC0: ADDR 0x480140040 
+[   10.814423] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x480140 offset:0x40 grain:64 syndrome:0x1)
+[   11.837879] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   11.837881] EDAC igen6 MC1: ADDR 0x105580060 
+[   11.837885] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x105580 offset:0x60 grain:64 syndrome:0x1)
+[   11.837888] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   11.837889] EDAC igen6 MC0: ADDR 0x107b10040 
+[   11.837891] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x107b10 offset:0x40 grain:64 syndrome:0x1)
+[   12.861917] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   12.861920] EDAC igen6 MC1: ADDR 0x107790040 
+[   12.861924] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x107790 offset:0x40 grain:64 syndrome:0x1)
+[   12.861926] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   12.861927] EDAC igen6 MC0: ADDR 0x481960040 
+[   12.861929] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x481960 offset:0x40 grain:64 syndrome:0x1)
+[   13.822869] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   13.822872] EDAC igen6 MC1: ADDR 0x100b90040 
+[   13.822876] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[   13.822879] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   13.822879] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   13.822881] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   14.845855] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   14.845858] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   14.845862] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   14.845865] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   14.845866] EDAC igen6 MC0: ADDR 0x112b30040 
+[   14.845868] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x112b30 offset:0x40 grain:64 syndrome:0x1)
+[   15.805860] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   15.805862] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   15.805871] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   15.805873] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   15.805874] EDAC igen6 MC0: ADDR 0x2fd800060 
+[   15.805877] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fd800 offset:0x60 grain:64 syndrome:0x1)
+[   16.530062] No UUID available providing old NGUID
+[   16.537409] No UUID available providing old NGUID
+[   16.829909] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   16.829917] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   16.829920] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   16.829923] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   16.829923] EDAC igen6 MC0: ADDR 0x120600040 
+[   16.829926] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[   17.853843] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   17.853845] EDAC igen6 MC1: ADDR 0x100fc0040 
+[   17.853850] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100fc0 offset:0x40 grain:64 syndrome:0x1)
+[   17.853852] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   17.853853] EDAC igen6 MC0: ADDR 0x2fe930040 
+[   17.853855] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fe930 offset:0x40 grain:64 syndrome:0x1)
+[   18.813868] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   18.813871] EDAC igen6 MC1: ADDR 0x100b90040 
+[   18.813875] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[   18.813877] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   18.813878] EDAC igen6 MC0: ADDR 0x120600040 
+[   18.813880] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[   19.837962] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   19.837968] EDAC igen6 MC1: ADDR 0x100fc0040 
+[   19.837975] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100fc0 offset:0x40 grain:64 syndrome:0x1)
+[   19.837977] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   19.837978] EDAC igen6 MC0: ADDR 0x2fe930040 
+[   19.837981] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fe930 offset:0x40 grain:64 syndrome:0x1)
+[   20.861905] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   20.861908] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   20.861912] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   20.861914] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   20.861915] EDAC igen6 MC0: ADDR 0x120600040 
+[   20.861941] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[   21.821903] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   21.821906] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   21.821911] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   21.821918] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   21.821919] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   21.821921] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   22.845875] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   22.845879] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   22.845883] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   22.845885] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   22.845885] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   22.845888] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   23.805965] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   23.805970] EDAC igen6 MC1: ADDR 0x2fd0c0040 
+[   23.805977] EDAC MC1: 1 CE on MC#1_Chan#1_DIMM#1 (channel:1 slot:1 page:0x2fd0c0 offset:0x40 grain:64 syndrome:0x1)
+[   23.805979] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   23.805980] EDAC igen6 MC0: ADDR 0x2fe610040 
+[   23.805983] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fe610 offset:0x40 grain:64 syndrome:0x1)
+[   24.829989] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   24.829994] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   24.830001] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   24.830003] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   24.830004] EDAC igen6 MC0: ADDR 0x2fd800060 
+[   24.830007] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fd800 offset:0x60 grain:64 syndrome:0x1)
+[   25.853706] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   25.853708] EDAC igen6 MC1: ADDR 0x100fc0040 
+[   25.853712] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100fc0 offset:0x40 grain:64 syndrome:0x1)
+[   25.853714] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   25.853715] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   25.853717] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   26.813921] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   26.813927] EDAC igen6 MC1: ADDR 0x100b90040 
+[   26.813934] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[   26.813937] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   26.813937] EDAC igen6 MC0: ADDR 0x120600040 
+[   26.813941] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[   27.837746] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   27.837749] EDAC igen6 MC1: ADDR 0x100fc0040 
+[   27.837753] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100fc0 offset:0x40 grain:64 syndrome:0x1)
+[   27.837755] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   27.837756] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   27.837758] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   27.967116] Bluetooth: RFCOMM TTY layer initialized
+[   27.967125] Bluetooth: RFCOMM socket layer initialized
+[   27.967156] Bluetooth: RFCOMM ver 1.11
+[   28.028264] rfkill: input handler disabled
+[   28.861890] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   28.861893] EDAC igen6 MC1: ADDR 0x100fc0040 
+[   28.861921] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100fc0 offset:0x40 grain:64 syndrome:0x1)
+[   28.861923] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   28.861924] EDAC igen6 MC0: ADDR 0x112a00040 
+[   28.861926] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x112a00 offset:0x40 grain:64 syndrome:0x1)
+[   29.821914] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   29.821917] EDAC igen6 MC1: ADDR 0x100b90040 
+[   29.821922] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[   29.821924] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   29.821925] EDAC igen6 MC0: ADDR 0x120600040 
+[   29.821927] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[   30.845933] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   30.845936] EDAC igen6 MC1: ADDR 0x100fc0040 
+[   30.845941] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100fc0 offset:0x40 grain:64 syndrome:0x1)
+[   30.845943] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   30.845944] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   30.845947] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   31.805873] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   31.805876] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   31.805880] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   31.805883] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   31.805884] EDAC igen6 MC0: ADDR 0x2fe610040 
+[   31.805886] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fe610 offset:0x40 grain:64 syndrome:0x1)
+[   32.829937] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   32.829940] EDAC igen6 MC1: ADDR 0x100fc0040 
+[   32.829945] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100fc0 offset:0x40 grain:64 syndrome:0x1)
+[   32.829948] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   32.829949] EDAC igen6 MC0: ADDR 0x140120040 
+[   32.829955] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x140120 offset:0x40 grain:64 syndrome:0x1)
+[   33.853925] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   33.853928] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   33.853932] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   33.853934] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   33.853935] EDAC igen6 MC0: ADDR 0x120600060 
+[   33.853937] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[   34.813898] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   34.813901] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   34.813906] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   34.813908] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   34.813909] EDAC igen6 MC0: ADDR 0x140120040 
+[   34.813912] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x140120 offset:0x40 grain:64 syndrome:0x1)
+[   35.837863] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   35.837866] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   35.837870] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   35.837872] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   35.837873] EDAC igen6 MC0: ADDR 0x120600060 
+[   35.837875] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[   36.861928] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   36.861958] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   36.861964] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   36.861967] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   36.861967] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   36.861971] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   37.821966] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   37.821972] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   37.821984] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   37.821987] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   37.821988] EDAC igen6 MC0: ADDR 0x120600040 
+[   37.821991] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[   38.845833] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   38.845838] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   38.845845] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   38.845848] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   38.845849] EDAC igen6 MC0: ADDR 0x2fd430040 
+[   38.845853] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fd430 offset:0x40 grain:64 syndrome:0x1)
+[   39.805960] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   39.805971] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   39.805977] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   39.805980] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   39.805981] EDAC igen6 MC0: ADDR 0x2fcd40040 
+[   39.805985] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd40 offset:0x40 grain:64 syndrome:0x1)
+[   40.829962] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   40.829969] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[   40.829975] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[   40.829977] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   40.829978] EDAC igen6 MC0: ADDR 0x2fcd00040 
+[   40.829981] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd00 offset:0x40 grain:64 syndrome:0x1)
+[   41.853882] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   41.853886] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   41.853893] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   41.853896] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   41.853897] EDAC igen6 MC0: ADDR 0x2fcd40040 
+[   41.853900] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd40 offset:0x40 grain:64 syndrome:0x1)
+[   42.813927] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   42.813930] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[   42.813941] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[   42.813943] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   42.813944] EDAC igen6 MC0: ADDR 0x2fe630040 
+[   42.813947] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fe630 offset:0x40 grain:64 syndrome:0x1)
+[   43.837866] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   43.837869] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   43.837874] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   43.837876] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   43.837877] EDAC igen6 MC0: ADDR 0x2fe610040 
+[   43.837879] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fe610 offset:0x40 grain:64 syndrome:0x1)
+[   44.861953] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   44.861959] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   44.861990] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   44.861993] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   44.861993] EDAC igen6 MC0: ADDR 0x2fcd00040 
+[   44.861996] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd00 offset:0x40 grain:64 syndrome:0x1)
+[   45.821957] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   45.821963] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   45.821970] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   45.821972] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   45.821973] EDAC igen6 MC0: ADDR 0x120600040 
+[   45.821976] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[   46.845913] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   46.845916] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   46.845920] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   46.845922] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   46.845922] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   46.845924] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   47.805963] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   47.805969] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   47.805975] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   47.805978] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   47.805979] EDAC igen6 MC0: ADDR 0x120600060 
+[   47.805982] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[   48.829967] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   48.829980] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   48.829987] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   48.829990] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   48.829991] EDAC igen6 MC0: ADDR 0x2fd430040 
+[   48.829994] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fd430 offset:0x40 grain:64 syndrome:0x1)
+[   49.853844] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   49.853849] EDAC igen6 MC1: ADDR 0x2fd0c0040 
+[   49.853856] EDAC MC1: 1 CE on MC#1_Chan#1_DIMM#1 (channel:1 slot:1 page:0x2fd0c0 offset:0x40 grain:64 syndrome:0x1)
+[   49.853858] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   49.853859] EDAC igen6 MC0: ADDR 0x120600060 
+[   49.853862] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[   50.813896] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   50.813899] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   50.813903] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   50.813905] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   50.813906] EDAC igen6 MC0: ADDR 0x2fd430040 
+[   50.813913] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fd430 offset:0x40 grain:64 syndrome:0x1)
+[   51.837904] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   51.837910] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   51.837915] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   51.837918] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   51.837919] EDAC igen6 MC0: ADDR 0x120600060 
+[   51.837922] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[   52.861995] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   52.862000] EDAC igen6 MC1: ADDR 0x100fc0040 
+[   52.862006] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100fc0 offset:0x40 grain:64 syndrome:0x1)
+[   52.862009] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   52.862010] EDAC igen6 MC0: ADDR 0x2fd430040 
+[   52.862013] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fd430 offset:0x40 grain:64 syndrome:0x1)
+[   53.821903] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   53.821906] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[   53.821910] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[   53.821912] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   53.821913] EDAC igen6 MC0: ADDR 0x120600040 
+[   53.821920] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[   54.845957] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   54.845963] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   54.845975] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   54.846002] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   54.846003] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   54.846007] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   55.805958] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   55.805964] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   55.805977] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   55.805979] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   55.805980] EDAC igen6 MC0: ADDR 0x2fd800060 
+[   55.805984] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fd800 offset:0x60 grain:64 syndrome:0x1)
+[   56.829923] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   56.829926] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   56.829935] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   56.829938] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   56.829938] EDAC igen6 MC0: ADDR 0x2fd430040 
+[   56.829941] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fd430 offset:0x40 grain:64 syndrome:0x1)
+[   57.853894] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   57.853897] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   57.853902] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   57.853904] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   57.853905] EDAC igen6 MC0: ADDR 0x120600060 
+[   57.853907] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[   58.813886] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   58.813890] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   58.813895] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   58.813903] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   58.813904] EDAC igen6 MC0: ADDR 0x2fd430040 
+[   58.813906] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fd430 offset:0x40 grain:64 syndrome:0x1)
+[   59.837880] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   59.837883] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   59.837887] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   59.837889] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   59.837890] EDAC igen6 MC0: ADDR 0x120600060 
+[   59.837892] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[   60.861917] mce_notify_irq: 69 callbacks suppressed
+[   60.861921] mce: [Hardware Error]: Machine check events logged
+[   60.861998] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   60.861999] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   60.862008] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   60.862010] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   60.862011] EDAC igen6 MC0: ADDR 0x2fcd00040 
+[   60.862014] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd00 offset:0x40 grain:64 syndrome:0x1)
+[   61.821949] mce: [Hardware Error]: Machine check events logged
+[   61.822000] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   61.822001] EDAC igen6 MC1: ADDR 0x100b90040 
+[   61.822008] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[   61.822010] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   61.822011] EDAC igen6 MC0: ADDR 0x480040040 
+[   61.822014] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x480040 offset:0x40 grain:64 syndrome:0x1)
+[   62.845907] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   62.845909] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[   62.845913] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[   62.845915] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   62.845916] EDAC igen6 MC0: ADDR 0x2fd800060 
+[   62.845918] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fd800 offset:0x60 grain:64 syndrome:0x1)
+[   63.805975] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   63.805981] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   63.805986] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   63.805989] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   63.805990] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   63.805993] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   64.829968] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   64.829974] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   64.829980] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   64.829983] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   64.829984] EDAC igen6 MC0: ADDR 0x120600060 
+[   64.829986] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[   65.853874] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   65.853877] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   65.853881] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   65.853883] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   65.853884] EDAC igen6 MC0: ADDR 0x2fcd00040 
+[   65.853886] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd00 offset:0x40 grain:64 syndrome:0x1)
+[   66.621816] sof-audio-pci-intel-tgl 0000:00:1f.3: couldn't bind with audio component
+[   66.621843] sof-audio-pci-intel-tgl 0000:00:1f.3: init of i915 and HDMI codec failed
+[   66.624000] sof-audio-pci-intel-tgl 0000:00:1f.3: use msi interrupt mode
+[   66.629487] sof-audio-pci-intel-tgl 0000:00:1f.3: DMICs detected in NHLT tables: 0
+[   66.629489] sof-audio-pci-intel-tgl 0000:00:1f.3: no hda codecs found!
+[   66.629571] sof-audio-pci-intel-tgl 0000:00:1f.3: Direct firmware load for intel/sof/sof-adl.ri failed with error -2
+[   66.629573] sof-audio-pci-intel-tgl 0000:00:1f.3: error: sof firmware file is missing, you might need to
+[   66.629575] sof-audio-pci-intel-tgl 0000:00:1f.3:        download it from https://github.com/thesofproject/sof-bin/
+[   66.629576] sof-audio-pci-intel-tgl 0000:00:1f.3: error: failed to load DSP firmware -2
+[   66.629872] sof-audio-pci-intel-tgl 0000:00:1f.3: error: sof_probe_work failed err: -2
+[   66.813817] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   66.813820] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   66.813825] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   66.813828] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   66.813829] EDAC igen6 MC0: ADDR 0x120600040 
+[   66.813834] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[   67.837897] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   67.837901] EDAC igen6 MC1: ADDR 0x100fc0040 
+[   67.837906] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100fc0 offset:0x40 grain:64 syndrome:0x1)
+[   67.837909] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   67.837910] EDAC igen6 MC0: ADDR 0x2fd000040 
+[   67.837912] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fd000 offset:0x40 grain:64 syndrome:0x1)
+[   68.861901] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   68.861918] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   68.861923] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   68.861926] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   68.861927] EDAC igen6 MC0: ADDR 0x120600060 
+[   68.861929] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[   69.821872] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   69.821875] EDAC igen6 MC1: ADDR 0x100b90040 
+[   69.821879] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[   69.821881] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   69.821882] EDAC igen6 MC0: ADDR 0x480040040 
+[   69.821884] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x480040 offset:0x40 grain:64 syndrome:0x1)
+[   70.845989] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   70.845997] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   70.846005] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   70.846008] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   70.846009] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   70.846013] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   71.805974] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   71.805986] EDAC igen6 MC1: ADDR 0x100b90040 
+[   71.805995] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[   71.805998] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   71.805999] EDAC igen6 MC0: ADDR 0x120600040 
+[   71.806002] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[   72.829903] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   72.829912] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   72.829917] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   72.829920] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   72.829921] EDAC igen6 MC0: ADDR 0x2fd800060 
+[   72.829923] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fd800 offset:0x60 grain:64 syndrome:0x1)
+[   73.853938] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   73.853943] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   73.853949] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   73.853952] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   73.853952] EDAC igen6 MC0: ADDR 0x2fd800060 
+[   73.853955] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fd800 offset:0x60 grain:64 syndrome:0x1)
+[   74.813928] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   74.813931] EDAC igen6 MC1: ADDR 0x100fc0040 
+[   74.813935] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100fc0 offset:0x40 grain:64 syndrome:0x1)
+[   74.813937] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   74.813938] EDAC igen6 MC0: ADDR 0x120600060 
+[   74.813941] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[   75.837896] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   75.837902] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   75.837909] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   75.837911] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   75.837912] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   75.837915] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   76.861884] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   76.861887] EDAC igen6 MC1: ADDR 0x100fc0040 
+[   76.861891] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100fc0 offset:0x40 grain:64 syndrome:0x1)
+[   76.861908] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   76.861908] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   76.861910] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   77.821894] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   77.821897] EDAC igen6 MC1: ADDR 0x100b90040 
+[   77.821901] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[   77.821904] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   77.821909] EDAC igen6 MC0: ADDR 0x120600060 
+[   77.821911] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[   78.845939] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   78.845944] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   78.845951] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   78.845954] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   78.845955] EDAC igen6 MC0: ADDR 0x120c20040 
+[   78.845958] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[   79.805933] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   79.805936] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   79.805940] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   79.805942] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   79.805943] EDAC igen6 MC0: ADDR 0x120c20040 
+[   79.805946] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[   80.829915] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   80.829920] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   80.829927] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   80.829929] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   80.829930] EDAC igen6 MC0: ADDR 0x120600040 
+[   80.829933] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[   81.853954] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   81.853959] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   81.853966] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   81.853968] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   81.853969] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   81.853972] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   82.813958] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   82.813963] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   82.813976] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   82.813979] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   82.813979] EDAC igen6 MC0: ADDR 0x120c20040 
+[   82.813983] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[   83.837959] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   83.837964] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   83.837971] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   83.837974] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   83.837975] EDAC igen6 MC0: ADDR 0x120600040 
+[   83.837978] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[   84.861956] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   84.861962] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[   84.861969] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[   84.861972] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   84.861996] EDAC igen6 MC0: ADDR 0x120c20040 
+[   84.861999] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[   85.821956] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   85.821961] EDAC igen6 MC1: ADDR 0x100b90040 
+[   85.821973] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[   85.821975] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   85.821976] EDAC igen6 MC0: ADDR 0x120c20040 
+[   85.821979] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[   86.845936] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   86.845942] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   86.845949] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   86.845951] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   86.845952] EDAC igen6 MC0: ADDR 0x2fe630040 
+[   86.845955] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fe630 offset:0x40 grain:64 syndrome:0x1)
+[   87.805957] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   87.805962] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   87.805969] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   87.805972] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   87.805972] EDAC igen6 MC0: ADDR 0x120c20040 
+[   87.805975] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[   88.830005] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   88.830013] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[   88.830022] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[   88.830024] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   88.830025] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   88.830029] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   89.853943] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   89.853948] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[   89.853956] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[   89.853959] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   89.853960] EDAC igen6 MC0: ADDR 0x109750040 
+[   89.853962] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x109750 offset:0x40 grain:64 syndrome:0x1)
+[   90.813925] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   90.813933] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[   90.813941] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[   90.813944] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   90.813945] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   90.813948] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   91.837913] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   91.837916] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   91.837920] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   91.837922] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   91.837923] EDAC igen6 MC0: ADDR 0x120600040 
+[   91.837929] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[   92.861954] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   92.861960] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   92.861967] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   92.861994] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   92.861994] EDAC igen6 MC0: ADDR 0x120c20040 
+[   92.861997] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[   93.821959] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   93.821970] EDAC igen6 MC1: ADDR 0x100b90040 
+[   93.821977] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[   93.821979] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   93.821980] EDAC igen6 MC0: ADDR 0x120c20040 
+[   93.821983] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[   94.845881] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   94.845893] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   94.845907] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   94.845911] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   94.845912] EDAC igen6 MC0: ADDR 0x120600040 
+[   94.845917] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[   95.805915] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   95.805918] EDAC igen6 MC1: ADDR 0x4cc80040 
+[   95.805923] EDAC MC1: 1 CE on MC#1_Chan#1_DIMM#1 (channel:1 slot:1 page:0x4cc80 offset:0x40 grain:64 syndrome:0x1)
+[   95.805925] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   95.805926] EDAC igen6 MC0: ADDR 0x4cc20040 
+[   95.805928] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x4cc20 offset:0x40 grain:64 syndrome:0x1)
+[   96.829890] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   96.829893] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   96.829902] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   96.829904] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   96.829905] EDAC igen6 MC0: ADDR 0x120c20040 
+[   96.829907] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[   97.853956] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   97.853960] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[   97.853965] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[   97.853967] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   97.853968] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   97.853971] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   98.813870] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   98.813873] EDAC igen6 MC1: ADDR 0x2fd0c0040 
+[   98.813877] EDAC MC1: 1 CE on MC#1_Chan#1_DIMM#1 (channel:1 slot:1 page:0x2fd0c0 offset:0x40 grain:64 syndrome:0x1)
+[   98.813880] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   98.813880] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   98.813883] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[   99.837913] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[   99.837918] EDAC igen6 MC1: ADDR 0x100fc0040 
+[   99.837925] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100fc0 offset:0x40 grain:64 syndrome:0x1)
+[   99.837927] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[   99.837928] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[   99.837931] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  100.861884] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  100.861888] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  100.861891] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  100.861893] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  100.861894] EDAC igen6 MC0: ADDR 0x120600060 
+[  100.861896] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[  101.821880] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  101.821882] EDAC igen6 MC1: ADDR 0x100b90040 
+[  101.821892] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[  101.821894] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  101.821895] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  101.821897] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  102.845959] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  102.845964] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  102.845971] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  102.845974] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  102.845974] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  102.845978] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  103.805978] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  103.805984] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[  103.805991] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[  103.805993] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  103.805994] EDAC igen6 MC0: ADDR 0x120600060 
+[  103.805997] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[  104.829949] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  104.829952] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  104.829956] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  104.829958] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  104.829959] EDAC igen6 MC0: ADDR 0x120c20040 
+[  104.829961] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  105.853899] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  105.853902] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[  105.853906] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[  105.853908] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  105.853909] EDAC igen6 MC0: ADDR 0x120600040 
+[  105.853911] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[  106.813966] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  106.813973] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  106.813979] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  106.813982] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  106.813983] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  106.813986] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  107.837974] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  107.837980] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[  107.837986] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[  107.837989] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  107.837990] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  107.837993] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  108.861903] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  108.861905] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[  108.861909] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[  108.861911] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  108.861912] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  108.861914] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  109.821984] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  109.821989] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[  109.821995] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[  109.821998] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  109.821999] EDAC igen6 MC0: ADDR 0x120600060 
+[  109.822002] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[  110.845902] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  110.845904] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  110.845909] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  110.845911] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  110.845912] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  110.845914] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  111.805957] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  111.805963] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  111.805970] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  111.805972] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  111.805973] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  111.805977] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  112.829993] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  112.829999] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  112.830005] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  112.830008] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  112.830009] EDAC igen6 MC0: ADDR 0x120600040 
+[  112.830013] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[  113.853953] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  113.853959] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  113.853966] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  113.853968] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  113.853969] EDAC igen6 MC0: ADDR 0x120c20040 
+[  113.853972] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  114.813963] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  114.813968] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  114.813974] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  114.813977] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  114.813978] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  114.813981] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  115.837892] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  115.837895] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  115.837904] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  115.837906] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  115.837907] EDAC igen6 MC0: ADDR 0x120600040 
+[  115.837909] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[  116.861968] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  116.861974] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  116.861980] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  116.861982] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  116.861983] EDAC igen6 MC0: ADDR 0x120c20040 
+[  116.862011] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  117.821967] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  117.821973] EDAC igen6 MC1: ADDR 0x100b90040 
+[  117.821979] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[  117.821982] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  117.821982] EDAC igen6 MC0: ADDR 0x120c20040 
+[  117.821985] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  118.845955] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  118.845961] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  118.845968] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  118.845971] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  118.845972] EDAC igen6 MC0: ADDR 0x120600060 
+[  118.845974] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[  119.805980] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  119.805986] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  119.805994] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  119.805997] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  119.805998] EDAC igen6 MC0: ADDR 0x120c20040 
+[  119.806001] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  120.829906] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  120.829912] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  120.829917] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  120.829920] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  120.829920] EDAC igen6 MC0: ADDR 0x480030040 
+[  120.829923] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x480030 offset:0x40 grain:64 syndrome:0x1)
+[  121.853868] mce_notify_irq: 59 callbacks suppressed
+[  121.853871] mce: [Hardware Error]: Machine check events logged
+[  121.853894] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  121.853895] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  121.853899] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  121.853901] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  121.853902] EDAC igen6 MC0: ADDR 0x120600060 
+[  121.853904] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[  122.813918] mce: [Hardware Error]: Machine check events logged
+[  122.813942] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  122.813944] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  122.813954] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  122.813956] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  122.813957] EDAC igen6 MC0: ADDR 0x120c20040 
+[  122.813959] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  123.837899] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  123.837902] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  123.837911] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  123.837913] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  123.837914] EDAC igen6 MC0: ADDR 0x120c20040 
+[  123.837916] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  124.861910] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  124.861916] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  124.861922] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  124.861925] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  124.861926] EDAC igen6 MC0: ADDR 0x120600060 
+[  124.861928] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[  125.821957] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  125.821964] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[  125.821975] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[  125.821978] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  125.821979] EDAC igen6 MC0: ADDR 0x120c20040 
+[  125.821982] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  126.845886] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  126.845889] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  126.845893] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  126.845896] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  126.845897] EDAC igen6 MC0: ADDR 0x120600040 
+[  126.845899] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[  127.805984] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  127.805995] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  127.806002] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  127.806005] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  127.806006] EDAC igen6 MC0: ADDR 0x120c20040 
+[  127.806009] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  128.829901] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  128.829906] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[  128.829919] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[  128.829921] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  128.829922] EDAC igen6 MC0: ADDR 0x120600040 
+[  128.829925] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[  129.853758] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  129.853764] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[  129.853770] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[  129.853772] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  129.853773] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  129.853782] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  130.813973] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  130.813979] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  130.813986] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  130.813989] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  130.813990] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  130.813992] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  131.837964] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  131.837969] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  131.837976] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  131.837979] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  131.837980] EDAC igen6 MC0: ADDR 0x120c20040 
+[  131.837983] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  132.862665] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  132.862672] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[  132.862679] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[  132.862681] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  132.862682] EDAC igen6 MC0: ADDR 0x2fe610040 
+[  132.862686] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fe610 offset:0x40 grain:64 syndrome:0x1)
+[  133.821950] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  133.821955] EDAC igen6 MC1: ADDR 0x1311e0040 
+[  133.821962] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x1311e0 offset:0x40 grain:64 syndrome:0x1)
+[  133.821971] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  133.821972] EDAC igen6 MC0: ADDR 0x105660040 
+[  133.821974] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x105660 offset:0x40 grain:64 syndrome:0x1)
+[  134.845965] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  134.845970] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  134.845977] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  134.845980] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  134.845980] EDAC igen6 MC0: ADDR 0x120c20040 
+[  134.845983] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  135.805961] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  135.805967] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  135.805980] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  135.805983] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  135.805984] EDAC igen6 MC0: ADDR 0x120600060 
+[  135.805987] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[  136.829886] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  136.829889] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  136.829893] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  136.829896] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  136.829897] EDAC igen6 MC0: ADDR 0x2fd800060 
+[  136.829899] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x2fd800 offset:0x60 grain:64 syndrome:0x1)
+[  137.853917] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  137.853920] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  137.853924] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  137.853926] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  137.853927] EDAC igen6 MC0: ADDR 0x480030040 
+[  137.853929] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x480030 offset:0x40 grain:64 syndrome:0x1)
+[  138.813893] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  138.813896] EDAC igen6 MC1: ADDR 0x100b90040 
+[  138.813904] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[  138.813907] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  138.813908] EDAC igen6 MC0: ADDR 0x120c20040 
+[  138.813910] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  139.837870] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  139.837873] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  139.837882] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  139.837884] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  139.837885] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  139.837887] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  140.861973] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  140.861978] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  140.861985] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  140.861987] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  140.861988] EDAC igen6 MC0: ADDR 0x120c20040 
+[  140.861991] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  141.821893] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  141.821897] EDAC igen6 MC1: ADDR 0x100b90040 
+[  141.821906] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[  141.821908] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  141.821909] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  141.821911] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  142.845901] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  142.845904] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  142.845907] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  142.845909] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  142.845910] EDAC igen6 MC0: ADDR 0x120600060 
+[  142.845912] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[  143.805885] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  143.805896] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  143.805903] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  143.805910] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  143.805911] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  143.805914] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  144.829877] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  144.829880] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  144.829889] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  144.829891] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  144.829892] EDAC igen6 MC0: ADDR 0x120600060 
+[  144.829894] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[  145.853890] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  145.853893] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[  145.853897] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[  145.853900] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  145.853900] EDAC igen6 MC0: ADDR 0x120c20040 
+[  145.853902] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  146.813965] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  146.813970] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  146.813977] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  146.813979] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  146.813980] EDAC igen6 MC0: ADDR 0x120600040 
+[  146.813983] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[  147.837957] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  147.837963] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  147.837970] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  147.837973] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  147.837974] EDAC igen6 MC0: ADDR 0x120c20040 
+[  147.837977] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  148.861953] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  148.861973] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  148.861980] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  148.861983] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  148.861984] EDAC igen6 MC0: ADDR 0x120600060 
+[  148.861987] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[  149.821956] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  149.821961] EDAC igen6 MC1: ADDR 0x100b90040 
+[  149.821968] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[  149.821971] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  149.821972] EDAC igen6 MC0: ADDR 0x120c20040 
+[  149.821975] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  150.845972] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  150.845978] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  150.845985] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  150.845987] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  150.845988] EDAC igen6 MC0: ADDR 0x120600060 
+[  150.845991] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[  151.805979] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  151.805984] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  151.805991] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  151.805994] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  151.805995] EDAC igen6 MC0: ADDR 0x120c20040 
+[  151.805997] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  152.829983] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  152.829989] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  152.829996] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  152.829998] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  152.829999] EDAC igen6 MC0: ADDR 0x120600060 
+[  152.830002] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[  153.853983] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  153.853989] EDAC igen6 MC1: ADDR 0x107af0060 
+[  153.853996] EDAC MC1: 1 CE on MC#1_Chan#1_DIMM#1 (channel:1 slot:1 page:0x107af0 offset:0x60 grain:64 syndrome:0x1)
+[  153.853999] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  153.854000] EDAC igen6 MC0: ADDR 0x2fcd40040 
+[  153.854003] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd40 offset:0x40 grain:64 syndrome:0x1)
+[  154.813995] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  154.814000] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  154.814006] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  154.814008] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  154.814009] EDAC igen6 MC0: ADDR 0x120600060 
+[  154.814013] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[  155.837894] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  155.837898] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  155.837902] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  155.837904] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  155.837909] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  155.837911] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  156.861975] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  156.861995] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  156.862001] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  156.862004] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  156.862005] EDAC igen6 MC0: ADDR 0x120600060 
+[  156.862008] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x60 grain:64 syndrome:0x1)
+[  157.821933] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  157.821937] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[  157.821945] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[  157.821948] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  157.821948] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  157.821950] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  158.845947] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  158.845952] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  158.845959] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  158.845961] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  158.845962] EDAC igen6 MC0: ADDR 0x120600040 
+[  158.845965] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[  159.805977] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  159.805983] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  159.805995] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  159.805998] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  159.805999] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  159.806002] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
+[  160.830001] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  160.830007] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[  160.830014] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[  160.830016] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  160.830017] EDAC igen6 MC0: ADDR 0x120600040 
+[  160.830019] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[  161.853899] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  161.853902] EDAC igen6 MC1: ADDR 0x2fcdc0040 
+[  161.853906] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fcdc0 offset:0x40 grain:64 syndrome:0x1)
+[  161.853908] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  161.853909] EDAC igen6 MC0: ADDR 0x120c20040 
+[  161.853911] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  162.813980] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  162.813986] EDAC igen6 MC1: ADDR 0x100b90040 
+[  162.813994] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[  162.813996] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  162.813997] EDAC igen6 MC0: ADDR 0x120600040 
+[  162.814005] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120600 offset:0x40 grain:64 syndrome:0x1)
+[  163.837970] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  163.837981] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  163.837987] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  163.837990] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  163.837991] EDAC igen6 MC0: ADDR 0x120c20040 
+[  163.837994] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  164.861965] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  164.861984] EDAC igen6 MC1: ADDR 0x2fd3d0040 
+[  164.861991] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x2fd3d0 offset:0x40 grain:64 syndrome:0x1)
+[  164.861993] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  164.861994] EDAC igen6 MC0: ADDR 0x120c20040 
+[  164.861997] EDAC MC0: 1 CE on MC#0_Chan#0_DIMM#0 (channel:0 slot:0 page:0x120c20 offset:0x40 grain:64 syndrome:0x1)
+[  165.821984] EDAC igen6 MC1: HANDLING IBECC MEMORY ERROR
+[  165.821989] EDAC igen6 MC1: ADDR 0x100b90040 
+[  165.821995] EDAC MC1: 1 CE on MC#1_Chan#0_DIMM#1 (channel:0 slot:1 page:0x100b90 offset:0x40 grain:64 syndrome:0x1)
+[  165.821998] EDAC igen6 MC0: HANDLING IBECC MEMORY ERROR
+[  165.821999] EDAC igen6 MC0: ADDR 0x2fcd60040 
+[  165.822002] EDAC MC0: 1 CE on MC#0_Chan#1_DIMM#0 (channel:1 slot:0 page:0x2fcd60 offset:0x40 grain:64 syndrome:0x1)
